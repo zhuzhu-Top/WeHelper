@@ -1,0 +1,113 @@
+syntax = "proto2";
+
+package wechat_proto;
+message SKBuiltinString {
+    optional string str = 1;
+}
+
+message SKBuiltinString_ {
+    optional uint32 len = 1;
+    //base64字符串
+    optional bytes buffer = 2;
+}
+message BaseRequest {
+    //会话key base64字符串
+    optional bytes session_key = 1;
+    optional uint32 uin = 2;
+    //设备id base64字符串
+    optional bytes device_id = 3;
+    optional uint32 client_version = 4;
+    optional string os_type = 5;
+    optional uint32 scene = 6;
+}
+
+message GetCDNDnsRequest {
+    optional BaseRequest baseRequest = 1;
+    optional string clientIp = 2;
+    optional uint32 scene = 3;
+}
+message BaseResponse {
+    optional int32 ret = 1;
+    optional SKBuiltinString errMsg = 2;
+}
+
+message GetCDNDnsResponse {
+    optional BaseResponse baseResponse = 1;
+    // 图片视频资源下载相关的DNS信息
+    optional CDNDnsInfo dnsInfo = 2;
+    // 朋友圈资源下载相关的DNS信息
+    optional CDNDnsInfo snsDnsInfo = 3;
+    // App下载相关的DNS信息
+    optional CDNDnsInfo appDnsInfo = 4;
+    optional SKBuiltinString_ cdndnsRuleBuf = 5;
+    optional SKBuiltinString_ fakeCdndnsRuleBuf = 6;
+    optional CDNDnsInfo fakeDnsInfo = 7;
+    optional int32 getCdnDnsIntervalMs = 8;
+    optional CDNClientConfig defaultConfig = 9;
+    optional CDNClientConfig disasterConfig = 10;
+    optional int32 nextIpv6 = 11;
+}
+
+message CDNDnsInfo {
+    optional uint32 ver = 1;
+    optional uint32 uin = 2;
+    optional uint32 expireTime = 3;
+    optional int32 frontId = 4;
+    optional int32 frontIpcount = 5;
+    repeated SKBuiltinString frontIplist = 6;
+    optional string zoneDomain = 7;
+    optional SKBuiltinString_ authKey = 8;
+    optional int32 zoneId = 9;
+    optional int32 zoneIpcount = 10;
+    repeated SKBuiltinString zoneIplist = 11;
+    repeated CDNDnsPortInfo frontIpportList = 12;
+    repeated CDNDnsPortInfo zoneIpportList = 13;
+    optional int32 frontIpportCount = 14;
+    optional int32 zoneIpportCount = 15;
+    optional uint32 fakeUin = 16;
+    optional SKBuiltinString_ newAuthKey = 17;
+}
+
+message CDNClientConfig {
+    optional int32 c2CshowErrorDelayMs = 1;
+    optional int32 snsshowErrorDelayMs = 2;
+    optional int32 c2CretryInterval = 3;
+    optional int32 snsretryInterval = 4;
+    optional int32 c2Crwtimeout = 5;
+    optional int32 snsrwtimeout = 6;
+}
+
+message CDNDnsPortInfo {
+    optional uint32 portCount = 1;
+    repeated uint32 portList = 2;
+}
+message DATA {
+    optional uint32 len = 1;
+    //base64字符串
+    optional bytes data = 2;
+}
+message CmdItem {
+    optional uint32 cmd_id = 1;
+    optional DATA cmd_buf = 2;
+}
+message CmdList {
+    optional uint32 count = 1;
+    repeated CmdItem item_list = 2;
+}
+message NewSyncResponseMSGItem{
+    optional uint32 mgs_id =1;
+    optional SKBuiltinString from_wxid =2;
+    optional SKBuiltinString to_wxid =3;
+    optional uint32 unkonw =4;
+    optional SKBuiltinString msg_content =5;
+
+}
+message NewSyncResponse {
+    optional int32 ret = 1;
+    optional CmdList cmdList = 2;
+    optional uint32 continueFlag = 3;
+    optional SKBuiltinString_ keyBuf = 4;
+    optional uint32 status = 5;
+    optional uint32 onlineVersion = 6;
+    optional uint32 svrTime = 7;
+}

@@ -1,0 +1,107 @@
+
+[2023-06-15 09:18:39.005] [info]
+        ClientSequence : 7
+
+[2023-06-15 09:18:39.006] [info] lobglink hand ->: 0x130c
+[2023-06-15 09:18:39.240] [info] SeqID: 76,Cmd: 1000000237,PacketLength: 134
+[2023-06-15 09:18:39.240] [debug]
+                       LonglinkUnpack:  未知消息内容
+                           plainTxt  :
+00 00 00 86 00 10 00 01 3b 9a ca ed 00 00 00 4c
+bf 9a 5f 00 00 00 00 a9 aa f6 4b b4 43 08 0f 00
+00 00 00 19 60 2a 77 b7 89 00 8a 04 45 45 00 00 00 ff 00 00 00 00 9a 81 80 e9 fb 79 70 0a ea e2 50 66 76
+ba c4 7a 58 9a a6 9d 36 98 88 4d bf b9 2b b7 35 4d 0e bd 97 40 78 e2 55 54 75 89 4b ea 0c 07 3d 13 79 ab c1 4a 63 6a 4f
+f4 06 a9 8f 1c 0c c9 31 6a dc f7 3d 49 d7 98 07 bc 37 26 ff 4e bc 53 9e 07 4a d1
+                       plainTxt_len  : 86
+
+[2023-06-15 09:18:40.320] [info]
+        ClientSequence : 8
+
+[2023-06-15 09:18:40.321] [info] lobglink hand ->: 0x130c
+[2023-06-15 09:18:40.518] [info] SeqID: 77,Cmd: 1000000237,PacketLength: 134
+[2023-06-15 09:18:40.519] [debug]
+                       LonglinkUnpack:  未知消息内容
+                           plainTxt  : 00 00 00 86 00 10 00 01 3b 9a ca ed 00 00 00 4d
+bf 9a 5f 00 00 00 00 a9 aa f6 4b
+b4 43 08 0f 00 00 00 00 19 60 2a 77 b7 89 00 8a 04 45 45 00 00 00 ff 00 00 00 00 9a 81 80 e9 fb 79 70 0a ea e2 50 66 76
+ba c4 7a 58 9a a6 9d 36 98 88 4d bf b9 2b b7 35 4d 0e bd bb 94 e9 0d 53 6a be dd e3 81 f6 c0 2c f8 66 7a 01 e3 37 14 0a
+c7 a5 75 f2 d4 82 fd f2 2c 09 b6 03 10 c1 ff 17 0d e4 1c b2 1c 39 96 60 02 11 bf
+                       plainTxt_len  : 86
+
+
+自己构造的发包
+
+[2023-06-15 10:15:08.641] [info] WXLongLinkMessage SeqID: 96,Cmd: 237,PacketLength: 121
+[2023-06-15 10:15:08.641] [info] current ClientSequence : 7
+[2023-06-15 10:15:08.683] [debug] send rpc req  id-> 16
+[2023-06-15 10:15:08.686] [info] lobglink hand ->: 0x1378
+[2023-06-15 10:15:08.686] [debug] WeChatBridge::SocketSend ["ok"]
+[2023-06-15 10:15:08.686] [info] webscoket onmessage : {"msg":"","type":2}
+[2023-06-15 10:15:08.940] [info] SeqID: 96,Cmd: 1000000237,PacketLength: 134
+[2023-06-15 10:15:08.940] [debug]
+                       LonglinkUnpack:  未知消息内容
+                           plainTxt  : 00 00 00 86 00 10 00 01 3b 9a ca ed 00 00 00 60 bf 9a 5f 00 00 00 00 a9 aa f6 4b
+62 43 08 0f 00 00 00 00 3e 91 7b 6f 62 ed 00 8a 04 45 45 00 00 00 ff 00 00 00 00 92 da db c3 b7 c4 1c a1 67 c4 70 33 b1
+5c 57 5f 6d 3e db c7 b0 ee 15 52 a7 9c 11 55 8e 7a f9 f9 24 e6 90 e5 93 96 14 e8 04 44 8c 37 3a 33 9d 83 a2 27 7b 56 e5
+e6 db dd 92 b0 a0 fc db 2b 62 0c df f0 7b 8a d5 b2 58 7a 55 e2 62 be df 6c b4 62
+                       plainTxt_len  : 86
+
+[2023-06-15 10:15:10.836] [info] WXLongLinkMessage SeqID: 97,Cmd: 237,PacketLength: 121
+[2023-06-15 10:15:10.836] [info] current ClientSequence : 8
+[2023-06-15 10:15:10.838] [debug] send rpc req  id-> 17
+[2023-06-15 10:15:10.840] [info] lobglink hand ->: 0x1378
+[2023-06-15 10:15:10.841] [debug] WeChatBridge::SocketSend ["ok"]
+[2023-06-15 10:15:10.841] [info] webscoket onmessage : {"msg":"","type":2}
+[2023-06-15 10:15:10.895] [info] SeqID: 97,Cmd: 1000000237,PacketLength: 47
+[2023-06-15 10:15:10.895] [debug]
+                       LonglinkUnpack:  未知消息内容
+                           plainTxt  : 00 00 00 2f 00 10 00 01 3b 9a ca ed 00 00 00 61 7e 0f ff ff ff f3 00 00 00 00 62
+43 08 0f 00 00 00 00 3e 91 7b 6f 62 ed 00 8a 04 00 00 00 00
+                       plainTxt_len  : 2F
+
+
+
+
+    //这个函数下断点0x24的地方就是返回的pb
+  v19 = (AutoBuffer *)(*((int (__thiscall **)(WxString *, int *, int, int, int, int, _DWORD, _DWORD, _DWORD, int, const SKBuffer *, _BYTE **, WxString *, AutoBuffer *))v15->pStr
+                       + 5))(
+                        v15,
+                        &v47,
+                        v38,
+                        v39,
+                        v40,
+                        255,
+                        0,
+                        0,
+                        0,
+                        v42,
+                        v43,
+                        v44,
+                        v45,
+                        max_len);
+  max_len = v19;
+  LOBYTE(v53) = 9;
+  *(_OWORD *)&v51[32] = v41;
+  v20 = v19[1].parray_ < (unsigned __int8 *)&Point;
+  *(_OWORD *)&v51[16] = v41;
+  *(_OWORD *)v51 = v41;
+  v50 = v41;
+  if ( !v20 )
+    max_len = (AutoBuffer *)v19->parray_;
+  sub_751250(&v49, (int)v15[16].pStr);
+  DWORD2(v48) = max_len;
+  LOBYTE(v48) = 2;
+  sub_F57A20(
+    2,
+    (int)"D:\\Tools\\agent\\workspace\\MicroMsgWindowsV392\\MicroMsgWin\\03_service\\net\\scene\\NetSceneNoBaseEx.h",
+    (int)v54,
+    100,
+    (int)"NetSceneNoBaseEx<class micromsg::NewSyncRequest,class micromsg::NewSyncResponse>::buf2Resp",
+    (int)"NetSceneBaseEx",
+    (int)"out %s::buf2Resp id:%d",
+    v48,
+    v49,
+    v50,
+    *(__int128 *)v51,
+    *(__int128 *)&v51[16],
+    *(__int128 *)&v51[32]);

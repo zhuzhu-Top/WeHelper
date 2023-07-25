@@ -1,0 +1,15 @@
+做鉴权 收集用户信息做备份
+frida-compile 可以直接编译成二进制
+
+
+可上层开发人 : 3566337901
+
+
+
+
+
+微信DNS 地址
+http://dns.weixin.qq.com/cgi-bin/micromsg-bin/newgetdns
+
+watchpoint set variable 变量名称 // 源码调试用到，略过
+watchpoint set expression 0x1457fa70

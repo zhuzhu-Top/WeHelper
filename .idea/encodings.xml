@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Net/NetMain.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/ByteBuffer.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/NetTools.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/common/NetTools.h" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/common/ProtobufHelper.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/BuildPackage.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/core/BuildPackage.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/crypto/CryptoTools.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/for_test/testMain.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/frida/core.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/include/frida-core.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/include/pub_include.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/main.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/we_chat/WXLongLinkMessage.cpp" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/we_chat/WXLongLinkMessage.h" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/we_chat/WeChatBridge.cpp" charset="UTF-8" />
+  </component>
+</project>
