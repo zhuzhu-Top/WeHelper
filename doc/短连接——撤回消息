@@ -1,0 +1,424 @@
+
+//第一步 加密得到内部加密包体
+[enter func EncryptInnerBody 内部加密包体]
+algorithm 0x5
+data         : 0a 33 0a 01 00 10 ae c7 bd fb 06 1a 10 57 30 33 64 31 32 35 33 31 34 62 30 65 35 64 61 20 97 84 a4 98 06 2a 0e 57 69 6e 64 6f 77 73 20 31 30 20 78 36 34 30 00 12 00 18 a4 da 9f ad 0b 20 96 83 d7 a4 06 28 00 32 13 77 78 69 64 5f 6c 6b 72 72 7a 6f 6b 63 37 65 70 6e 32 32 3a 13 77 78 69 64 5f 34 7a 72 36 31 36 69 72 36 66 69 31 32 32 40 54 48 df d9 fa c9 b5 fc ac b2 73
+data len     :   123
+ret data     : 83 96 78 38 26 e6 62 65 93 24 c0 f5 71 f7 0c cc 77 12 82 2c 9f df 33 56 fe 0b 98 d5 a4 a2 b9 f7 73 40 3f 89 88 46 0d 8d 04 83 02 01 b3 bd 92 ae 98 fe bb 34 c4 b0 64 6a 51 b6 8a f3 02 4f 78 ec 9b 7f 15 3d 6e 37 04 54 7d b8 98 0d 11 89 e3 60 66 42 2e f3 ab af 36 64 20 45 28 83 6c 8d eb e0 e4 52 60 5b 85 7c 19 da b3 0a 31 f1 7e 91 0e 25 0d 77 d8 17 f9 9e f4 58 aa be 39 63 32 5a 68 28
+ret data len : 128
+
+[Leave func EncryptInnerBody]
+
+
+
+//第二部得到内部包头 0xbf
+[enter func PB2InnerHead 打包得到的内部包头]
+pb_data : 0a 33 0a 01 00 10 ae c7 bd fb 06 1a 10 57 30 33 64 31 32 35 33 31 34 62 30 65 35 64 61 20 97 84 a4 98 06 2a 0e 57 69 6e 64 6f 77 73 20 31 30 20 78 36 34 30 00 12 00 18 a4 da 9f ad 0b 20 96 83 d7 a4 06 28 00 32 13 77 78 69 64 5f 6c 6b 72 72 7a 6f 6b 63 37 65 70 6e 32 32 3a 13 77 78 69 64 5f 34 7a 72 36 31 36 69 72 36 66 69 31 32 32 40 54 48 df d9 fa c9 b5 fc ac b2 73
+pb_data len  : 123
+inner_head : bf ba 5f 63 09 02 17 6f 6f 63 ae d5 43 18 0f 00 00 00 00 60 96 5b 3b 39 a6 00 d2 04 7b 7b 00 0f ae e3 f0 c7 09 00 ec 9a f9 88 02 00 00 00 83 96 78 38 26 e6 62 65 93 24 c0 f5 71 f7 0c cc 77 12 82 2c 9f df 33 56 fe 0b 98 d5 a4 a2 b9 f7 73 40 3f 89 88 46 0d 8d 04 83 02 01 b3 bd 92 ae 98 fe bb 34 c4 b0 64 6a 51 b6 8a f3 02 4f 78 ec 9b 7f 15 3d 6e 37 04 54 7d b8 98 0d 11 89 e3 60 66 42 2e f3 ab af 36 64 20 45 28 83 6c 8d eb e0 e4 52 60 5b 85 7c 19 da b3 0a 31 f1 7e 91 0e 25 0d 77 d8 17 f9 9e f4 58 aa be 39 63 32 5a 68 28
+inner_head len  : 174
+
+[Leave func PB2InnerHead]
+
+
+[enter func HKDF_Expand]
+
+info len : 38
+info  : 65 61 72 6c 79 20 64 61 74 61 20 6b 65 79 20 65 78 70 61 6e 73 69 6f 6e 
+
+a3 ba 63 bc 
+c6 84 6f 87
+ 17 f2 72 80
+  6b b3 84 0b 
+  be f4 62 42
+   e2 73 ae d5
+    57 e2 f7 f5
+     af 8e 22 9b
+
+info txt  : early data key expansion��c�Ƅo��r�k����bB�s��W�����"�
+out len :0x1c
+out :28 31 46 3c 87 a5 4a 7e 74 a2 8e dd fc 9f 07 66 6b 66 1e 40 71 02 16 48 8e e8 2e e1
+[leave func HKDF_Expand]
+
+   TLS_AESGCM  Enctypt
+iv_len : c
+iv_data : 6b 66 1e 40 71 02 16 48 8e e8 2e e0
+key_len : 10
+key_data : 28 31 46 3c 87 a5 4a 7e 74 a2 8e dd fc 9f 07 66
+aad_len : d
+aad_data : 00 00 00 00 00 00 00 01 19 f1 04 00 24
+plainTxt_len : 14
+plainTxt_data : 00 00 00 10 08 00 00 00 0b 01 00 00 00 06 00 12 64 95 c1 af
+ret_len : cf
+ret_len : 
+
+
+00 00 00 10 
+   08 
+   00 00 00 0b 
+      01 
+      00 00 00 06 
+         00 12 
+         64 95 c1 af
+
+type :
+19 f1 04 00 a1 
+00 00 00 9d 01 04 f1 01 00 a8 bf 8b 32 e9 2b 34 5c 3a 9b 7f 28 2b 4d 02 30 b0 97 11 89 ba 16 2f 33 2d 13 e1 80 3e ed aa 35 95 64 95 c1 af 00 00 00 6f 01 00 00 00 6a 00 0f 01 00 00 00 63 01 00 09 3a 80 00 00 00 00 00 48 00 0c 42 84 95 61 a2 b7 b0 29 03 f5 6d 82 00 48 36 36 2e 0c e3 50 85 62 44 4d ec 30 f5 e7 69 06 1d 69 97 2b 90 6c 97 c6 9f b5 b7 47 21 a7 40 53 a3 5a 10 a3 66 9e 7e 4c 07 d6 be 6d 68 09 02 14 93 82 f9 6d 22 2b 61 2e 94 ce 67 0f c0 cb 21 49 eb 5e 23 95 26 7e 7e cd 19 f1 04 00 24 9b 61 df 0f e3 5b 52 03 77 fb d5 c9 e1 60 59 e7 67 fe 08 f2 
+tag:
+f1 2f 09 5b 8e 7f a3 24 b0 97 89 c2 e9 97 9b ab
+
+
+
+
+TLS 加密得到 最终发包包体
+   TLS_AESGCM  Enctypt
+iv_len : c
+iv_data : 6b 66 1e 40 71 02 16 48 8e e8 2e e3
+key_len : 10
+key_data : 28 31 46 3c 87 a5 4a 7e 74 a2 8e dd fc 9f 07 66
+aad_len : d
+aad_data :  
+plainTxt_len : f1
+plainTxt_data : 
+//拼接了cgi 和host的内部包
+00 00 00 ed 00 1f 2f 63 67 69 2d 62 69 6e 2f 6d 69 63 72 6f 6d 73 67 2d 62 69 6e 2f 72 65 76 6f 6b 65 6d 73 67 00 18 73 7a 65 78 74 73 68 6f 72 74 2e 77 65 69 78 69 6e 2e 71 71 2e 63 6f 6d 00 00 00 ae bf ba 5f 63 09 02 17 6f 6f 63 ae d5 43 18 0f 00 00 00 00 60 96 5b 3b 39 a6 00 d2 04 7b 7b 00 0f ae e3 f0 c7 09 00 ec 9a f9 88 02 00 00 00 83 96 78 38 26 e6 62 65 93 24 c0 f5 71 f7 0c cc 77 12 82 2c 9f df 33 56 fe 0b 98 d5 a4 a2 b9 f7 73 40 3f 89 88 46 0d 8d 04 83 02 01 b3 bd 92 ae 98 fe bb 34 c4 b0 64 6a 51 b6 8a f3 02 4f 78 ec 9b 7f 15 3d 6e 37 04 54 7d b8 98 0d 11 89 e3 60 66 42 2e f3 ab af 36 64 20 45 28 83 6c 8d eb e0 e4 52 60 5b 85 7c 19 da b3 0a 31 f1 7e 91 0e 25 0d 77 d8 17 f9 9e f4 58 aa be 39 63 32 5a 68 28
+ret_len : 1d5
+ret_len :
+//上面包加密的结果
+19 f1 04 00 a1 00 00 00 9d 01 04 f1 01 00 a8 bf 8b 32 e9 2b 34 5c 3a 9b 7f 28 2b 4d 02 30 b0 97 11 89 ba 16 2f 33 2d 13 e1 80 3e ed aa 35 95 64 95 c1 af 00 00 00 6f 01 00 00 00 6a 00 0f 01 00 00 00 63 01 00 09 3a 80 00 00 00 00 00 48 00 0c 42 84 95 61 a2 b7 b0 29 03 f5 6d 82 00 48 36 36 2e 0c e3 50 85 62 44 4d ec 30 f5 e7 69 06 1d 69 97 2b 90 6c 97 c6 9f b5 b7 47 21 a7 40 53 a3 5a 10 a3 66 9e 7e 4c 07 d6 be 6d 68 09 02 14 93 82 f9 6d 22 2b 61 2e 94 ce 67 0f c0 cb 21 49 eb 5e 23 95 26 7e 7e cd 19 f1 04 00 24 9b 61 df 0f e3 5b 52 03 77 fb d5 c9 e1 60 59 e7 67 fe 08 f2 f1 2f 09 5b 8e 7f a3 24 b0 97 89 c2 e9 97 9b ab 
+当前包加密的内容跟
+tyep17 f1 04 01 01
+dara c1 74 2a 8c 52 d1 40 98 3e b3 68 44 15 c3 9c 24 d2 2c de 52 0c ab 9b 93 b9 f5 f5 f7 83 d1 0e 81 5e 33 ef 2f aa 25 d1 65 6f 65 92 a7 f5 b9 26 42 9b 33 07 44 4e 16 c3 2b e9 29 8b 40 8f 45 1a e7 09 93 e7 cc 3b 79 4a 4f be 0f eb 45 88 09 57 bd ed 46 2f 11 61 37 e2 3d ec ed d6 6f de d3 0b 0c 7e 3b 46 a8 ea 10 27 1c e5 21 b9 cd 03 e4 56 b9 a1 c8 92 15 8b e3 4c 5f 05 1f 80 eb d0 c8 fb 2e e8 dc f5 9f 87 65 48 f9 b9 04 52 a8 ab 71 45 e3 48 52 77 f0 36 52 5a 5d 6a de 28 6e fe 8e 91 43 19 46 a6 f3 ab 1c e6 b6 f3 6d 5c 15 85 6b 76 ad da 05 60 ad 2b 99 35 c0 be 2a b6 8a 0f 2b be 2f ba c6 d2 73 24 f7 6f 5e 9e 86 28 55 c2 a4 91 55 55 26 f7 7f f4 f0 98 6f c8 d7 56 3d 29 f1 0f e2 43 6b a4 c5 bc f0 41 f3 cd fd 20 e5 47 f9 6e f1 0d
+tag
+70 f9 dc 0d 12 1b 42 78 3b f1 0e b1 7e e0 46 32
+
+
+   TLS_AESGCM  Enctypt
+iv_len : c
+iv_data : 6b 66 1e 40 71 02 16 48 8e e8 2e e2
+key_len : 10
+key_data : 28 31 46 3c 87 a5 4a 7e 74 a2 8e dd fc 9f 07 66
+aad_len : d
+aad_data : 00 00 00 00 00 00 00 03 15 f1 04 00 17
+plainTxt_len : 7
+plainTxt_data : 00 00 00 03 00 01 01
+ret_len : 1f1
+ret_len : 19 f1 04 00 a1 00 00 00 9d 01 04 f1 01 00 a8 bf 8b 32 e9 2b 34 5c 3a 9b 7f 28 2b 4d 02 30 b0 97 11 89 ba 16 2f 33 2d 13 e1 80 3e ed aa 35 95 64 95 c1 af 00 00 00 6f 01 00 00 00 6a 00 0f 01 00 00 00 63 01 00 09 3a 80 00 00 00 00 00 48 00 0c 42 84 95 61 a2 b7 b0 29 03 f5 6d 82 00 48 36 36 2e 0c e3 50 85 62 44 4d ec 30 f5 e7 69 06 1d 69 97 2b 90 6c 97 c6 9f b5 b7 47 21 a7 40 53 a3 5a 10 a3 66 9e 7e 4c 07 d6 be 6d 68 09 02 14 93 82 f9 6d 22 2b 61 2e 94 ce 67 0f c0 cb 21 49 eb 5e 23 95 26 7e 7e cd 
+
+
+19 f1 04 00 24 9b 61 df 0f e3 5b 52 03 77 fb d5 c9 e1 60 59 e7 67 fe 08 f2 f1 2f 09 5b 8e 7f a3 24 b0 97 89 c2 e9 97 9b ab 
+
+type :
+17 f1 04 01 01 
+data:
+c1 74 2a 8c 52 d1 40 98 3e b3 68 44 15 c3 9c 24 d2 2c de 52 0c ab 9b 93 b9 f5 f5 f7 83 d1 0e 81 5e 33 ef 2f aa 25 d1 65 6f 65 92 a7 f5 b9 26 42 9b 33 07 44 4e 16 c3 2b e9 29 8b 40 8f 45 1a e7 09 93 e7 cc 3b 79 4a 4f be 0f eb 45 88 09 57 bd ed 46 2f 11 61 37 e2 3d ec ed d6 6f de d3 0b 0c 7e 3b 46 a8 ea 10 27 1c e5 21 b9 cd 03 e4 56 b9 a1 c8 92 15 8b e3 4c 5f 05 1f 80 eb d0 c8 fb 2e e8 dc f5 9f 87 65 48 f9 b9 04 52 a8 ab 71 45 e3 48 52 77 f0 36 52 5a 5d 6a de 28 6e fe 8e 91 43 19 46 a6 f3 ab 1c e6 b6 f3 6d 5c 15 85 6b 76 ad da 05 60 ad 2b 99 35 c0 be 2a b6 8a 0f 2b be 2f ba c6 d2 73 24 f7 6f 5e 9e 86 28 55 c2 a4 91 55 55 26 f7 7f f4 f0 98 6f c8 d7 56 3d 29 f1 0f e2 43 6b a4 c5 bc f0 41 f3 cd fd 20 e5 47 f9 6e f1 0d 
+tag ：
+70 f9 dc 0d 12 1b 42 78 3b f1 0e b1 7e e0 46 32 
+
+
+15 f1 04 00 17 
+bd 3e 97 f4 46 c8 07 
+tag : 
+93 eb 4d 74 4d 95 2a 3c b5 8f 75 5d c1 02 28 57
+
+
+   TLS_AESGCM Decrypt
+iv_len : c
+iv_data : d6 f4 f0 1b 7e b7 89 64 08 b2 ab 21
+key_len : 10
+key_data : 5f af ef cc fe 88 d2 bf 1b a6 6d 06 3c 72 16 48
+aad_len : d
+aad_data : 00 00 00 00 00 00 00 0c 17 f1 04 00 24
+plainTxt_len : 24
+plainTxt_data : 25 75 cd 67 14 00 e2 52 69 ab 2d ce 4a 6c d8 b5 a1 cf db 47 a3 36 83 01 d4 bf 08 52 5a d1 bf 78 55 23 0e 3e
+ret_len : 14
+ret_len : 00 00 00 14 00 10 00 01 00 00 00 18 00 00 00 00 00 00 00 02
+
+
+[enter func EncryptInnerBody 内部加密包体]
+algorithm 0x5
+data         : 78 9c 3d 8e bb 4a 03 41 14 86 33 93 bd 9c 8d 98 1c e3 95 d8 6c 9d c6 08 41 f2 26 be 80 1a e3 2d a2 85 62 25 88 58 2a c4 07 50 10 4c 15 5f 21 45 1a b3 46 09 ab 96 76 b2 2e 04 04 a3 85 85 e2 c9 3f c1 e6 9b ef 1f fe 73 66 52 9a 12 7c 72 c8 b9 6f 4d 7d 9d ed 6b 9a cb 12 29 fe 89 be 3e b4 98 e6 5a 6c 2c c9 d7 2f 03 b3 c8 e2 84 d0 06 1d d0 05 49 48 e4 f1 51 6c 7a 29 e4 11 3e 8b 4c 1e 45 4e 73 3d fa c4 46 fe b7 b1 a1 39 34 ce ad e3 41 77 02 1b 27 31 31 c5 97 a1 f9 c3 34 9f d6 9f ae 1c b1 19 6e fe 3e 8b 59 94 93 8e 43 b3 7c d1 ca 4b 5a c6 dc 0a 58 06 57 c1 0a b8 06 ae 83 1b e0 26 58 05 b7 c1 1d f0 40 e8 d1 ad 1a 3e e3 51 5b f1 eb 7b 00 0d 14 07 bd 50 d4 a6 3b 25 3d 9b 3a e6 b8 57 5c 96 e3 41 61 f8 cd e5 6e c3 0c c7 2e b7 6f 8c 76 33 7c de 7b 84 86 19 ae 75 e4 d6 57 f9 f4 62 65 6b a9 ba b7 eb cf 17 fc fd 85 62 21 59 52 7f ae 91 60 50
+data len     :   279
+ret data     : 5f 31 c3 91 18 49 cb 08 14 9b 57 b0 aa 23 19 49 2c 21 b4 37 0b 50 45 58 d4 70 5a 45 9b ae b4 23 1f bb d4 c4 dd 76 9c bd d4 5c f7 03 fd 40 ba 4a 52 4a f9 7e 08 38 90 85 96 44 d7 9e 4d 88 a0 33 c2 4f e4 32 9a 1b 7e 6a db 38 cf 4d 11 47 ce 4e f7 25 f3 f6 fe a2 a3 d3 bb 98 a0 4c 39 7b 39 b0 72 f6 f7 f1 f1 07 20 73 9f f3 12 a7 03 c6 a4 59 ca ce 2b e1 6b 6b 2e 76 17 1d cb 48 5d e1 3b 4f 94 8c 7b bd 2c 09 51 01 7d 6e cf 67 58 b2 ff 58 92 e6 d2 8b 67 10 4b 66 7f 36 a3 60 7c 26 e2 59 62 1c 38 cb d7 d5 25 f3 e0 92 65 c8 51 9d 48 ea 68 e0 80 d8 3a 25 17 41 28 f2 82 eb 61 fb 43 94 23 e2 a3 26 d9 3c 33 e7 7e 3b fe 10 9d 6d 6e 73 43 40 ef ce e5 0e a0 f2 91 4f 73 d1 cd 9d 7c 34 a0 0a 82 2f 91 a0 b4 6c e5 68 fb 49 98 3d ad 02 63 a2 61 26 7f b0 91 9d 31 60 09 3f d6 01 98 48 8d e5 5a e0 b7 58 a6 5e 84 04 5e 2a 9c 34 e2 68 fa a8 4c 17 c9 29 50 65 a4 ce 04 b6 d9 1d 49 86
+ret data len : 288
+
+[Leave func EncryptInnerBody]
+
+
+[enter func PB2InnerHead 打包得到的内部包头]
+pb_data : 0a 02 08 00 10 87 80 10 1a f9 02 08 f3 02 12 f3 02 08 2f 12 08 08 01 10 fd e7 f5 f2 02 12 08 08 02 10 93 e9 f5 f2 02 12 08 08 03 10 a7 de f5 f2 02 12 04 08 04 10 00 12 04 08 05 10 00 12 04 08 06 10 00 12 04 08 07 10 00 12 04 08 08 10 00 12 08 08 09 10 83 e9 f5 f2 02 12 04 08 0a 10 00 12 08 08 0b 10 90 e7 f5 f2 02 12 04 08 0d 10 00 12 08 08 0e 10 a8 e7 f4 f2 02 12 08 08 10 10 a8 e7 f4 f2 02 12 08 08 11 10 a8 e7 f4 f2 02 12 06 08 13 10 c4 85 02 12 04 08 14 10 00 12 04 08 15 10 00 12 08 08 16 10 a1 d3 f5 f2 02 12 08 08 17 10 8f a8 d5 a4 06 12 08 08 18 10 c0 fe d6 a4 06 12 04 08 1a 10 00 12 06 08 1b 10 a0 c4 2a 12 04 08 65 10 00 12 04 08 66 10 00 12 04 08 67 10 00 12 04 08 68 10 00 12 04 08 69 10 00 12 04 08 6a 10 00 12 04 08 6b 10 00 12 04 08 6c 10 00 12 04 08 6d 10 00 12 04 08 6f 10 00 12 04 08 70 10 00 12 04 08 72 10 00 12 04 08 7a 10 00 12 09 08 c9 01 10 c0 fe d6 a4 06 12 09 08 ca 01 10 e5 ef cb a4 06 12 09 08 cb 01 10 cb ec d3 a4 06 12 05 08 cc 01 10 00 12 05 08 cd 01 10 00 12 05 08 ce 01 10 67 12 05 08 cf 01 10 00 12 09 08 e8 07 10 d1 ae d6 a4 06 12 09 08 e9 07 10 ca af d6 a4 06 12 09 08 d1 0f 10 94 ec d4 a4 06 12 09 08 d3 0f 10 93 cd d6 a4 06 20 01 2a 0e 57 69 6e 64 6f 77 73 20 31 30 20 78 36 34 30 03 38 01
+pb_data len  : 410
+inner_head : bf c1 5f 63 09 02 17 6f 6f 63 ae d5 43 18 0f 00 00 00 00 60 96 5b 3b 39 a6 00 8a 01 9a 03 97 02 00 0f fb cc 85 c5 0b 00 d3 b0 9c 88 02 00 00 00 5f 31 c3 91 18 49 cb 08 14 9b 57 b0 aa 23 19 49 2c 21 b4 37 0b 50 45 58 d4 70 5a 45 9b ae b4 23 1f bb d4 c4 dd 76 9c bd d4 5c f7 03 fd 40 ba 4a 52 4a f9 7e 08 38 90 85 96 44 d7 9e 4d 88 a0 33 c2 4f e4 32 9a 1b 7e 6a db 38 cf 4d 11 47 ce 4e f7 25 f3 f6 fe a2 a3 d3 bb 98 a0 4c 39 7b 39 b0 72 f6 f7 f1 f1 07 20 73 9f f3 12 a7 03 c6 a4 59 ca ce 2b e1 6b 6b 2e 76 17 1d cb 48 5d e1 3b 4f 94 8c 7b bd 2c 09 51 01 7d 6e cf 67 58 b2 ff 58 92 e6 d2 8b 67 10 4b 66 7f 36 a3 60 7c 26 e2 59 62 1c 38 cb d7 d5 25 f3 e0 92 65 c8 51 9d 48 ea 68 e0 80 d8 3a 25 17 41 28 f2 82 eb 61 fb 43 94 23 e2 a3 26 d9 3c 33 e7 7e 3b fe 10 9d 6d 6e 73 43 40 ef ce e5 0e a0 f2 91 4f 73 d1 cd 9d 7c 34 a0 0a 82 2f 91 a0 b4 6c e5 68 fb 49 98 3d ad 02 63 a2 61 26 7f b0 91 9d 31 60 09 3f d6 01 98 48 8d e5 5a e0 b7 58 a6 5e 84 04 5e 2a 9c 34 e2 68 fa a8 4c 17 c9 29 50 65 a4 ce 04 b6 d9 1d 49 86
+inner_head len  : 336
+
+[Leave func PB2InnerHead]
+
+
+   TLS_AESGCM  Enctypt
+iv_len : c
+iv_data : ba 13 48 ca f6 87 63 fc 54 92 3c 73
+key_len : 10
+key_data : 13 38 6c 6e 87 c2 5c 19 0e bb 36 68 ed f2 97 2e
+aad_len : d
+aad_data : 00 00 00 00 00 00 00 0b 17 f1 04 01 70
+plainTxt_len : 160
+plainTxt_data : 00 00 01 60 00 10 00 01 00 00 00 79 00 00 02 91 bf c1 5f 63 09 02 17 6f 6f 63 ae d5 43 18 0f 00 00 00 00 60 96 5b 3b 39 a6 00 8a 01 9a 03 97 02 00 0f fb cc 85 c5 0b 00 d3 b0 9c 88 02 00 00 00 5f 31 c3 91 18 49 cb 08 14 9b 57 b0 aa 23 19 49 2c 21 b4 37 0b 50 45 58 d4 70 5a 45 9b ae b4 23 1f bb d4 c4 dd 76 9c bd d4 5c f7 03 fd 40 ba 4a 52 4a f9 7e 08 38 90 85 96 44 d7 9e 4d 88 a0 33 c2 4f e4 32 9a 1b 7e 6a db 38 cf 4d 11 47 ce 4e f7 25 f3 f6 fe a2 a3 d3 bb 98 a0 4c 39 7b 39 b0 72 f6 f7 f1 f1 07 20 73 9f f3 12 a7 03 c6 a4 59 ca ce 2b e1 6b 6b 2e 76 17 1d cb 48 5d e1 3b 4f 94 8c 7b bd 2c 09 51 01 7d 6e cf 67 58 b2 ff 58 92 e6 d2 8b 67 10 4b 66 7f 36 a3 60 7c 26 e2 59 62 1c 38 cb d7 d5 25 f3 e0 92 65 c8 51 9d 48 ea 68 e0 80 d8 3a 25 17 41 28 f2 82 eb 61 fb 43 94 23 e2 a3 26 d9 3c 33 e7 7e 3b fe 10 9d 6d 6e 73 43 40 ef ce e5 0e a0 f2 91 4f 73 d1 cd 9d 7c 34 a0 0a 82 2f 91 a0 b4 6c e5 68 fb 49 98 3d ad 02 63 a2 61 26 7f b0 91 9d 31 60 09 3f d6 01 98 48 8d e5 5a e0 b7 58 a6 5e 84 04 5e 2a 9c 34 e2 68 fa a8 4c 17 c9 29 50 65 a4 ce 04 b6 d9 1d 49 86
+ret_len : 175
+ret_len : 17 f1 04 01 70 93 5e 01 a4 4f 1e f5 6b 21 b5 07 d6 ec ec ee 26 27 03 d8 c2 5d 17 52 e9 16 39 81 f9 56 43 ab b0 3a 5f 3f 2f e4 76 1d 45 cd f5 bc 8d 41 da 24 7a 50 1d 28 20 7d 86 46 2c cb 83 1d c6 0d db ca 82 16 ad e5 8c 85 16 71 a2 67 a8 0e 2c e3 e7 db eb 96 8d 5f af a0 e8 07 e6 de e8 32 b8 2f 4a fd 46 96 30 53 1e 44 44 90 e0 5e 2e c3 62 2a 77 de 32 6f 47 92 6d f2 35 ea 3a 73 d3 ef d8 21 9f 2d 61 3e f7 a5 be 7c 3a e8 bf bc ec ae 38 d7 a7 67 cc 32 8e 73 15 91 cb 09 6e 66 2a 78 5d 78 7b 01 9d 1f 30 2d fd b4 7c bb 3c 12 bd 41 25 b9 a7 f5 66 40 55 91 2c 33 fe 79 ef ac f2 b1 2c c5 72 e6 58 93 99 6d 61 50 68 14 96 07 d3 23 0f 1e cc 67 23 0f cf 5d e1 c1 1a 7a 08 a5 69 17 33 9e a2 29 1b d0 9d 63 4d 34 46 96 fc eb 72 03 7a ba c5 c5 e6 68 fc 86 9d 76 4d cd 26 03 1a 90 55 ec 0b e6 e3 e2 d1 61 36 7e 18 c7 05 6d f6 2f 18 14 ef 28 b7 1a 78 26 2d 9f b5 c4 f2 5d 81 79 fd cf 42 59 24 50 33 44 9c 30 fb 2c 2d f6 9c a2 b2 01 74 1f fc 92 8c 76 fb dd 4e a0 8d 15 bb 7e ba 87 ad 8b 2c 01 f5 9f a5 c6 a7 c8 26 2b 60 c4 a1 4a 41 25 1f f5 fb b5 d6 dd 82 75 02 ac 93 28 04 ea ea 5a 64 2e c9 8f 37 0c 69 c0 63 0f 7e 42 36 d5 89 ff 0c
+
+
+[enter func HKDF_Expand]
+
+info len : 37
+info  : 68 61 6e 64 73 68 61 6b 65 20 6b 65 79 20 65 78 70 61 6e 73 69 6f 6e e2 d1 45 fe 26 69 fb 71 8d 02 97 b9 2a 73 e7 f4 d5 cc a0 93 10 3f de 5c e6 dd 6d 2a ae 2f 2a 9a
+info txt  : handshake key expansion��E�&i�q���*s���̠�?�\��m*�/*�
+out len :0x1c
+out :37 78 94 60 e0 35 f3 16 ca 90 0d ca 58 d5 5d ed 8d 2d 24 06 bc fd be ea 32 96 ed 62
+[leave func HKDF_Expand]
+
+   TLS_AESGCM Decrypt
+iv_len : c
+iv_data : 8d 2d 24 06 bc fd be ea 32 96 ed 63
+key_len : 10
+key_data : 37 78 94 60 e0 35 f3 16 ca 90 0d ca 58 d5 5d ed
+aad_len : d
+aad_data : 00 00 00 00 00 00 00 01 16 f1 04 00 37
+plainTxt_len : 37
+plainTxt_data : c1 58 e8 ea ec 7b 93 91 02 ef 81 0c 7c 5f b2 f7 b0 19 7e 90 28 d0 a3 fc 5a 7f 9e 4c 31 1f e4 fc 6e e2 48 2d 92 46 c4 98 79 2e 71 03 cc 5c b7 1c 44 b0 4b 54 68 39 97
+ret_len : 27
+ret_len : 00 00 00 23 14 00 20 b4 04 5a 28 63 ae d9 83 87 ff d6 31 5b 7b 7e 11 c5 1d 03 98 fa c6 24 84 59 62 ff 9a 18 84 e8 d2
+
+
+[enter func HKDF_Expand]
+
+info len : f
+info  : 73 65 72 76 65 72 20 66 69 6e 69 73 68 65 64
+info txt  : server finished
+out len :0x20
+out :79 89 17 dd 0d 4a 2a 52 ff 2f 88 fd 64 46 ef e5 73 cd 82 26 c2 3a f3 c8 96 de 8d 93 63 c0 d9 13
+[leave func HKDF_Expand]
+
+   TLS_AESGCM Decrypt
+iv_len : c
+iv_data : 8d 2d 24 06 bc fd be ea 32 96 ed 60
+key_len : 10
+key_data : 37 78 94 60 e0 35 f3 16 ca 90 0d ca 58 d5 5d ed
+aad_len : d
+aad_data : 00 00 00 00 00 00 00 02 17 f1 04 00 56
+plainTxt_len : 56
+plainTxt_data : f3 7d 6a 7e 86 93 41 c0 c6 ae 6c 05 0f 6f cc 1f c7 9f 1e 33 57 d8 96 44 9e e1 61 be 8d 2e 96 ed 49 7a 21 78 e8 5c d3 bc 9d 74 be 45 4c 57 06 09 27 21 ff 5e 96 b5 b0 f9 1b 52 62 ac d7 8a 87 e7 18 6c 14 33 8f 16 29 68 1c 3e 19 eb 07 78 ec bc b5 d9 94 2e e3 fc
+ret_len : 46
+ret_len : bf 9a 5f 00 00 00 00 6f 6f 63 ae d5 43 18 0f 00 00 00 00 60 96 5b 3b 39 a6 00 d2 04 11 11 00 00 00 ff 00 00 00 00 80 b6 99 9b 4e 3b 3e ce 61 6e 67 de 7b c9 92 52 06 20 a7 2a 1b bc 21 fd 50 1b 89 24 69 01 bb e6
+
+
+   TLS_AESGCM Decrypt
+iv_len : c
+iv_data : 8d 2d 24 06 bc fd be ea 32 96 ed 61
+key_len : 10
+key_data : 37 78 94 60 e0 35 f3 16 ca 90 0d ca 58 d5 5d ed
+aad_len : d
+aad_data : 00 00 00 00 00 00 00 03 15 f1 04 00 17
+plainTxt_len : 17
+plainTxt_data : 81 d0 f4 10 b9 1f 29 ee d8 d9 00 1e 1b 08 63 f0 ec e7 f0 fd 51 ff 49
+ret_len : 7
+ret_len : 00 00 00 03 00 01 01
+
+
+   TLS_AESGCM Decrypt
+iv_len : c
+iv_data : d6 f4 f0 1b 7e b7 89 64 08 b2 ab 20
+key_len : 10
+key_data : 5f af ef cc fe 88 d2 bf 1b a6 6d 06 3c 72 16 48
+aad_len : d
+aad_data : 00 00 00 00 00 00 00 0d 17 f1 04 02 98
+plainTxt_len : 298
+plainTxt_data : 7a 72 2a 88 eb 6e b8 3c cd b8 05 d8 ca ee d5 f7 eb af 79 55 7a 4b 78 4a ef d2 b5 91 a0 fc 15 01 eb f2 75 da 64 25 0c 0f cf ea 48 77 c9 04 e1 c2 8c 73 25 f2 2f 67 ac 03 5a d0 3e fc 97 7c 5c 05 1a 63 49 b2 c1 52 2a 74 c5 ce 31 e5 19 e6 0b c3 06 23 2f 3a 40 bf 1c 67 5a bf f4 e1 53 1a a5 76 91 19 32 2d d8 f0 d9 67 ce 29 54 1e 6d 42 56 7c d5 66 c7 5a 5f f5 7b f9 06 81 31 82 cf 72 07 de d2 7a 16 56 a5 82 8a ce 02 ea 1a a3 e7 ef 61 7b 5c 03 37 d7 19 ae 5e c4 94 ac 7c 3a cb ee 00 c8 d4 c8 f7 06 5a fe c7 71 62 b6 0c 62 5a 34 d0 c0 f0 98 dd 7d 4e 7d 27 66 ee 17 2e c1 30 e7 ed b0 75 40 2d 94 0d 58 10 b5 00 fd 6c 40 cb af e9 1b c4 ad e8 88 10 d9 6b 1f c8 b2 90 1f 7e 14 87 11 5d c0 d8 e4 b6 cd 1f 3a ba ab cd 88 2d 58 f3 00 ff a1 e2 8f 05 e1 95 30 b5 42 41 f1 29 8d 99 95 d0 32 4d ee 4d cd 40 5d 37 04 45 20 fd fe e4 82 5a 4e b5 60 7b ab 5c b1 92 14 ab 22 01 31 36 01 26 99 9e de 5a 95 60 aa 57 5a f0 c0 d9 f8 97 94 48 d1 ef b7 bc e0 06 78 4e 9c 0b f0 29 8f c0 1c ba d3 0b c0 be ca 40 62 1f 52 9a cb eb 4e 10 d4 d4 bf a8 3a 5a 54 ad f5 d1 93 d2 2d c2 ba ee 53 a9 1e bb d3 03 77 40 e3 67 8e 98 5a 41 20 55 6a ce a2 0b 38 46 fc 22 01 b8 a0 a4 88 b8 d0 b6 ac aa 60 82 0e 4d bd 3d 92 ff c7 87 34 f8 6f 1d 84 e8 aa bb a3 0a e5 e9 a1 7d ab 98 1c cd 32 2f f4 5e 4a 77 78 30 90 6b f5 8b 4f 60 4d bd 36 e8 e6 ff c5 85 94 9d ff af 2d 0d 90 45 f1 37 90 95 46 00 03 05 ef 45 57 dc e7 76 4c 27 b3 db a9 b2 b8 39 c1 ff d9 81 40 0e e0 4f 98 0d 69 88 f2 fc 62 2a 4b cc 4d 1e 56 c4 e0 25 16 1f d8 34 d4 e0 10 f0 b2 3b c4 49 a8 9c 3a 5a 92 87 31 cd fe 6b 74 bd 9f c9 cf 6c e7 a4 b1 e9 ae ec 0a 9e 51 ea 6e 6a 1e 15 0c b9 5d 60 5b c1 89 70 79 7a 97 a6 5d ac fb 19 a1 15 b9 54 29 1f cb c9 97 2a 0f 21 bc f3 3c bc 6c d1 54 90 30 07 5d 48 c5 31 f9 d1 e8 f3 78 1b e8 cb fc 30 85 5a aa a9 33 61 be c3 c3 ce b4 9f 11 2d 46 12 fb 86 4e d0 a3 c0 3c ba 77 13 e4 2c f5 cc 5e b5 59 27 98 b7 40 5c 5e 84 ad b9 90 24 ab 6b cb c8 18 d9 6a 52 b5 d8 f4 bb 4a 33 3d f2 9e 8d 0d b7 96 0f 05 ba 4b 00 73 41 9a c7 65 8a 44 df 70 77 a4
+ret_len : 288
+ret_len : 00 00 02 88 00 10 00 01 3b 9a ca 79 00 00 02 91 bf a1 5f 00 00 00 00 6f 6f 63 ae d5 43 18 0f 00 00 00 00 60 96 5b 3b 39 a6 00 8a 01 c0 06 c7 04 00 00 00 ff 00 00 00 00 5d 44 e6 37 f1 e7 61 af b5 e4 05 63 da a1 6a 54 ad 95 6b c4 cc 81 fa 3c a2 a9 c9 f9 1c 6b 6c 1e cc 86 8a 4d f1 18 3f 8c e7 cd c8 db c3 84 a0 61 df 28 50 20 2c 5a f2 e9 c6 83 7b 51 9a ad 13 11 51 9c ec 50 bd 05 f2 28 1b df 93 00 61 7d 17 ad 98 35 a7 ed 02 75 89 c4 ba 68 43 04 27 4c cc 48 1a 0b f2 c6 62 c1 5c 79 87 57 ab fe 24 84 67 2e e2 fe 42 89 64 dc d1 ef 2a c6 70 08 66 f7 a9 40 04 96 3c c5 80 a5 26 06 f3 af 40 65 22 9a 50 66 37 f9 d7 03 6e 23 fe 99 84 de 84 f5 8c ef 5d 83 f8 7a c7 3e 97 83 55 c9 67 54 b2 13 02 18 58 6e ce a9 96 aa 8f ba b4 5d d7 7b 97 f3 2d 3d fe 01 e7 cb ce ef c4 48 8b cb 24 a4 51 74 5c b2 ef 73 68 25 45 f4 b5 52 f2 15 69 53 e5 8c 82 ff 8a a5 c9 c7 9d a3 b7 98 c8 de 21 68 ce 03 33 df a1 e6 0c c7 03 2d e9 44 bb b4 bd 8c 57 74 39 ce d4 3c 81 7f 83 5a 38 62 d2 d4 d0 e3 bf 36 02 b8 43 25 27 d8 64 03 1d f5 38 b3 51 67 57 83 f9 48 59 f5 2a c2 58 44 38 30 c7 9d 68 3c ca 69 76 b8 67 e5 08 51 03 04 35 87 00 45 2e 54 d2 e0 46 ff b8 0d a9 2e a5 52 ac f0 55 94 1d 50 f5 3e d5 98 20 4d 38 65 02 29 3c c4 a7 80 2a 9c fb 22 ad ba a6 3e d5 37 df ce 96 3b af 21 e3 f5 11 be d9 8c 52 c4 da 64 35 24 95 a4 9b 63 54 8f 63 9c a4 00 ad fe f2 b3 9f da f2 05 15 1e b5 35 df 47 ed 57 d3 a8 94 a2 51 73 71 86 c1 a4 50 4e 70 ff ba 6c ac cc 7b 25 e6 84 79 92 a5 cc 60 a1 f8 44 9c ca 39 2d 15 94 12 6b 77 41 bb e2 d8 32 e7 00 4e 6c 76 9c 8f 9e 7d 9e f7 b6 57 7e a4 59 51 67 a7 9b 38 c0 04 ba 33 c9 2c 76 d5 04 cd 82 1b 4e 9f 5c 02 51 dc c7 4b 15 48 1e 78 a8 40 b2 49 97 c8 d0 45 71 ee cf 06 5f f2 d7 b6 9a 51 c2 0d d7 5b 2d 41 ef 0a 28 e8 12 38 2b c0 9c fe d2 16 31 06 14 bb 27 22 59 52 c9 f0 51 e8 ad 24 0e 23 5a 2f 7a 18 93 6c ee 4d 5c be fd 93 fc 5e 6a 77 09 9d aa 3f 9d 56 c5 b4 dc 0d dd 90 65 ed b1 f3 88 b2 e2 4b cf fb f2 15 e0 47 49 be 0e 33 04 94 b9 4b 2e 65 08
+
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+第一个包
+
+// $ ==>    9AD2A319 .£Ò.
+// $+4      9EB45A75 uZ´.
+// $+8      1DF4F543 Cõô.
+// $+C      FCF76CED íl÷ü
+// $+10     130C91F2 ò...
+// $+14     B4826CAD .l.´
+// $+18     D64E397F .9NÖ
+// $+1C     0E521764 d.R.
+// $+20     BAADF000 .ð.º
+// $+24     BAADF00D .ð.º
+// $+28     ABABABAB ««««
+// $+2C     ABABABAB ««««
+
+$ ==>    00 00 00 9D 01 04 F1 01 00 A8 9F 12 0B D6 93 D0 ......ñ..¨...Ö.Ð 
+$+10     B1 F5 86 52 A6 20 13 B2 83 C8 11 63 6C 73 A9 30 ±õ.R¦ .².È.cls©0 
+$+20     40 21 94 96 27 F5 B5 BC 19 AC 64 96 B3 EE 00 00 @!..'õµ¼.¬d.³î.. 
+$+30     00 6F 01 00 00 00 6A 00 0F 01 00 00 00 63 01 00 .o....j......c.. 
+$+40     09 3A 80 00 00 00 00 00 48 00 0C 9A 9B 6E F8 6A .:......H....nøj 
+$+50     E8 CF 05 29 2D DF 1F 00 48 4E 67 35 80 19 D1 C1 èÏ.)-ß..HNg5..ÑÁ 
+$+60     29 26 D6 C6 BF C0 8F 0E 43 FA 59 ED 49 CB F6 55 )&ÖÆ¿À..CúYíIËöU 
+$+70     31 69 67 43 5D 00 4F F2 42 ED 3B 61 D2 52 72 86 1igC].OòBí;aÒRr. 
+$+80     4E 6C 55 66 3A B6 03 1E E7 84 89 32 99 7F B0 D6 NlUf:¶..ç..2..°Ö 
+$+90     87 CB 7E 7B 7B 9A 24 54 86 5B AA F1 2D 89 62 3F .Ë~{{.$T.[ªñ-.b? 
+$+A0     E2 00 AD BA 0D F0 AD BA AB AB AB AB AB AB AB AB â..º.ð.º«««««««« 
+
+00 00 00 9D
+01 04 F1 01 00 A8   //固定
+9F 12 0B D6 93 D0 B1 F5 86 52 A6 20 13 B2 83 C8 11 63 6C 73 A9 30 40 21 94 96 27 F5 B5 BC 19 AC  //32字节随机数
+64 96 B3 EE        //时间戳
+00 00 00 6F        //剩下包长度 0x9D-6-32-4-4 = 6f
+01                 //固定 
+00 00 00 6A        //剩下长度
+00 0F 01           //固定
+00 00 00 63        //6A-3-4=63
+01 00 09 3A 80 00 00 00 00 00 48 00 0C 9A 9B 6E F8 6A
+E8 CF 05 29 2D DF 1F 00 48 4E 67 35 80 19 D1 C1
+29 26 D6 C6 BF C0 8F 0E 43 FA 59 ED 49 CB F6 55
+31 69 67 43 5D 00 4F F2 42 ED 3B 61 D2 52 72 86
+4E 6C 55 66 3A B6 03 1E E7 84 89 32 99 7F B0 D6
+87 CB 7E 7B 7B 9A 24 54 86 5B AA F1 2D 89 62 3F
+E2 00
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------
+hamc_kdf
+
+PSK  0x20
+$ ==>    0F 07 E6 49 F8 7B 3E 10 FB 16 B9 E7 62 F1 CB 21 ..æIø{>.û.¹çbñË! 
+$+10     9A 87 98 93 14 AB 7D 38 33 48 CD 3E 0E 50 6D 03 .....«}83HÍ>.Pm. 
+
+
+info 0x38
+$ ==>    65 61 72 6C 79 20 64 61 74 61 20 6B 65 79 20 65 early data key e 
+$+10     78 70 61 6E 73 69 6F 6E ED 58 62 61 04 F2 A0 06 xpansioníXba.ò . 
+$+20     68 FA DB 44 AD B6 CF A9 19 7C 6A 0E DB 6B AB C3 húÛD.¶Ï©.|j.Ûk«Ã 
+$+30     E2 35 BE 6F A4 CB 1A 64 00 F0 AD BA 0D F0 AD BA â5¾o¤Ë.d.ð.º.ð.º 
+
+
+
+返回值
+$ ==>    05 C3 9F 72 78 89 E7 71 26 8A 2D 28 B1 68 8B C4 .Ã.rx.çq&.-(±h.Ä 
+$+10     D1 7D 0E 33 81 D4 44 2F 50 DC C9 53 00 F0 AD BA Ñ}.3.ÔD/PÜÉS.ð.º 
+
+
+
+
+
+
+
+
+
+
+
+
+
+内部PB
+0a 33 0a 01 00 10 ae c7 bd fb 06 1a 10 57 30 33 64 31 32 35 33 31 34 62 30 65 35 64 61 20 97 84 a4 98 06 2a 0e 57 69 6e 64 6f 77 73 20 31 30 20 78 36 34 30 00 12 00 18 e3 b7 9b a3 01 20 91 ed f0 a4 06 28 00 32 13 77 78 69 64 5f 6c 6b 72 72 7a 6f 6b 63 37 65 70 6e 32 32 3a 13 77 78 69 64 5f 34 7a 72 36 31 36 69 72 36 66 69 31 32 32 40 ba 01 48 cd ee d6 e7 a6 b2 9a c1 77
+内部加密
+4b 15 17 ac 40 81 aa 19 bf 2e 2c e3 ba 12 a1 e7 8f 9c 14 53 05 47 eb 3d f9 c6 b6 2c 9f 5d 41 1e 82 bb 39 83 5f 65 bf f8 4d 21 b8 b1 b6 58 55 a2 5c ab 46 e2 6b 80 bf e2 ee 6a 13 78 aa e4 2c 0a b3 cd d0 0c 97 7c 9a 53 58 2c e9 e9 58 01 42 85 a5 7d 37 10 ec 76 f8 a5 54 db 54 89 45 59 f6 c1 73 7d cc 55 e6 f9 d1 a0 c9 6a 4a e9 da f2 04 93 fe 57 3a 61 ae c7 6c 21 ec 67 b1 10 6e 01 ac 97
+PB 组装包体
+bf ba 5f 63 09 02 17 6f 6f 63 ae 33 43 18 0f 00 00 00 00 32 9c 8b 97 0c cd 00 d2 04 7c 7c 00 0f e7 e6 d4 be 08 00 f0 ea 84 88 02 00 00 00 4b 15 17 ac 40 81 aa 19 bf 2e 2c e3 ba 12 a1 e7 8f 9c 14 53 05 47 eb 3d f9 c6 b6 2c 9f 5d 41 1e 82 bb 39 83 5f 65 bf f8 4d 21 b8 b1 b6 58 55 a2 5c ab 46 e2 6b 80 bf e2 ee 6a 13 78 aa e4 2c 0a b3 cd d0 0c 97 7c 9a 53 58 2c e9 e9 58 01 42 85 a5 7d 37 10 ec 76 f8 a5 54 db 54 89 45 59 f6 c1 73 7d cc 55 e6 f9 d1 a0 c9 6a 4a e9 da f2 04 93 fe 57 3a 61 ae c7 6c 21 ec 67 b1 10 6e 01 ac 97
+
+
+计算加密密钥
+[enter func HKDF_Expand]
+info len : 38
+info     : 65 61 72 6c 79 20 64 61 74 61 20 6b 65 79 20 65 78 70 61 6e 73 69 6f 6e 03 47 a5 67 cb af a5 99 1d 20 09 c2 12 42 c5 39 cd 4b 45 3f d3 6d 16 05 c1 68 09 83 27 f2 31 78
+info txt : early data key expansionG�g˯�� 	�B�9�KE?�m�h	�'�1x
+key len  : 20
+key      : 2c 30 3b 8a 0a b8 ff 58 e5 89 37 26 b5 00 b7 b0 4f 3f 0f 86 86 bd 5a 28 2c 6e d5 01 8c 5b 60 e6
+out len  : 0x1c
+out      : 
+73 65 42 92 28 c2 2e b2 0d 63 86 d2 5b 96 a5 fc 
+52 82 7e e4 48 71 7a fa dd 68 0b 03
+[leave func HKDF_Expand]
+
+
+
+第一个宝包
+
+00 00 00 9d 01 04 f1 01 00 a8 24 64 c7 44 b0 dc 
+59 d8 dd e9 ed 29 e8 fb 23 68 63 c1 9e 3f d3 99 
+8b a9 21 1e b7 f1 40 6c 0c e8 64 9c 36 a3 00 00 
+00 6f 01 00 00 00 6a 00 0f 01 00 00 00 63 01 00 
+09 3a 80 00 00 00 00 00 48 00 0c a4 52 6c 3f 79 
+45 a0 bf b1 2f 1d b6 00 48 9c f9 88 ba fc 0c 4c 
+d5 11 9b 30 16 ba 66 ab 28 e9 be 54 fc d8 71 1a 
+52 8c 0a bb af 2c 99 94 28 94 53 3c 97 40 7d 16 
+44 62 81 05 ed 8c 09 19 50 c1 e1 3d ff 91 94 0e 
+1a 52 2b 5d 48 a0 fd f2 0b b5 5f 00 a6 7c a2 ba 
+d0
+//解析
+00 00 00 9d 
+01 04 f1 01 00 a8 
+24 64 c7 44 b0 dc 59 d8 dd e9 ed 29 e8 fb 23 68 63 c1 9e 3f d3 99 8b a9 21 1e b7 f1 40 6c 0c e8 
+64 9c 36 a3 
+00 00 00 6f 
+01 
+00 00 00 6a
+00 0f 01 
+00 00 00 63 01 00 
+09 3a 80 00 00 00 00 00 48 00 0c a4 52 6c 3f 79 
+45 a0 bf b1 2f 1d b6 00 48 9c f9 88 ba fc 0c 4c 
+d5 11 9b 30 16 ba 66 ab 28 e9 be 54 fc d8 71 1a 
+52 8c 0a bb af 2c 99 94 28 94 53 3c 97 40 7d 16 
+44 62 81 05 ed 8c 09 19 50 c1 e1 3d ff 91 94 0e 
+1a 52 2b 5d 48 a0 fd f2 0b b5 5f 00 a6 7c a2 ba 
+d0
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//1
+19 f1 04 00 a1 
+   00 00 00 9d
+   01 04 f1 01 00 a8 
+   24 64 c7 44 b0 dc 59 d8 dd e9 ed 29 e8 fb 23 68 63 c1 9e 3f d3 99 8b a9 21 1e b7 f1 40 6c 0c e8 
+   64 9c 36 a3 
+   00 00 00 6f 01 00 00 00 6a 00 0f 01 00 00 00 63 01 00 09 3a 80 00 00 00 00 00 48 00 0c a4 52 6c 3f 79 45 a0 bf b1 2f 1d b6 00 48 9c f9 88 ba fc 0c 4c d5 11 9b 30 16 ba 66 ab 28 e9 be 54 fc d8 71 1a 52 8c 0a bb af 2c 99 94 28 94 53 3c 97 40 7d 16 44 62 81 05 ed 8c 09 19 50 c1 e1 3d ff 91 94 0e 1a 52 2b 5d 48 a0 fd f2 0b b5 5f 00 a6 7c a2 ba d0
+//2
+19 f1 04 00 24 b8 52 a3 95 42 3d 23 fc b4 62 00 1d 16 a3 6a ef 6b a5 95 9c 5c 97 47 88 58 91 2a a1 94 07 30 8b 8a 3c dd 5e
+原始明文 
+00 00 00 10 08 00 00 00 0b 01 00 00 00 06 00 12 64 9c 36 a3
+//3
+17 f1 04 01 01 4b 43 9a 3f 88 b5 7f df 48 c2 d0 f5 5b 06 25 61 83 d1 e3 a3 e9 f3 ed 19 73 b8 5e b1 3d 39 59 bb 05 d2 ce b5 c0 76 34 00 d0 d5 2c da 14 a9 da aa 84 0e 1a a7 d0 07 e6 0e f4 c9 7d 5f 18 d4 66 78 2a 90 e6 f3 67 b8 40 6b 90 fa 3a a3 73 b7 d5 d9 dc 68 b7 03 72 fc 17 57 52 04 ff 5c ae e1 e5 47 22 14 ad 8a a6 09 46 31 65 09 5f d2 db 5f b3 0e 1d 3d 0b 73 96 24 67 4f fb cc 46 34 a4 19 19 d5 f3 a0 25 22 dc 0c 4e 5f c8 7f 99 8f 2c e1 7a 6b 8b 49 39 0e e4 13 a6 e0 51 87 c1 19 10 51 94 71 11 3b 06 29 cc 41 80 5f 12 e4 2c 35 e6 7a 16 22 41 a2 19 3b 6d 6c 45 14 86 c1 ad 44 61 1a bc 96 93 9e 07 d5 ad 07 14 b3 11 2f 1b 63 ad 88 46 8f 29 fa 0b f2 81 18 6e 46 2d 0b 62 a0 a3 51 d2 c7 6f c5 c7 f4 af 5e 6f 17 d3 d2 ec 8f aa b4 e6 bb 5f fb d7 40 92 7c fb be 8f 91 db 16 8d 0f e0 37 ad
+原始明文
+00 00 00 ed 00 1f 2f 63 67 69 2d 62 69 6e 2f 6d 69 63 72 6f 6d 73 67 2d 62 69 6e 2f 72 65 76 6f 6b 65 6d 73 67 00 18 73 7a 65 78 74 73 68 6f 72 74 2e 77 65 69 78 69 6e 2e 71 71 2e 63 6f 6d 00 00 00 ae bf ba 5f 63 09 02 17 6f 6f 63 ae 33 43 18 0f 00 00 00 00 32 9c 8b 97 0c cd 00 d2 04 7c 7c 00 0f e7 e6 d4 be 08 00 f0 ea 84 88 02 00 00 00 4b 15 17 ac 40 81 aa 19 bf 2e 2c e3 ba 12 a1 e7 8f 9c 14 53 05 47 eb 3d f9 c6 b6 2c 9f 5d 41 1e 82 bb 39 83 5f 65 bf f8 4d 21 b8 b1 b6 58 55 a2 5c ab 46 e2 6b 80 bf e2 ee 6a 13 78 aa e4 2c 0a b3 cd d0 0c 97 7c 9a 53 58 2c e9 e9 58 01 42 85 a5 7d 37 10 ec 76 f8 a5 54 db 54 89 45 59 f6 c1 73 7d cc 55 e6 f9 d1 a0 c9 6a 4a e9 da f2 04 93 fe 57 3a 61 ae c7 6c 21 ec 67 b1 10 6e 01 ac 97
+0000h  00 00 00 ED 00 1F 2F 63 67 69 2D 62 69 6E 2F 6D  ...í../cgi-bin/m 
+0010h  69 63 72 6F 6D 73 67 2D 62 69 6E 2F 72 65 76 6F  icromsg-bin/revo 
+0020h  6B 65 6D 73 67 00 18 73 7A 65 78 74 73 68 6F 72  kemsg..szextshor 
+0030h  74 2E 77 65 69 78 69 6E 2E 71 71 2E 63 6F 6D 00  t.weixin.qq.com. 
+0040h  00 00 AE BF BA 5F 63 09 02 17 6F 6F 63 AE 33 43  ..®¿º_c...ooc®3C 
+0050h  18 0F 00 00 00 00 32 9C 8B 97 0C CD 00 D2 04 7C  ......2œ‹—.Í.Ò.| 
+0060h  7C 00 0F E7 E6 D4 BE 08 00 F0 EA 84 88 02 00 00  |..çæÔ¾..ðê„ˆ... 
+0070h  00 4B 15 17 AC 40 81 AA 19 BF 2E 2C E3 BA 12 A1  .K..¬@
+
+//4
+15 f1 04 00 17 20 bd fc ca a3 ea 91 74 92 90 e2 b6 e3 f9 a4 35 59 1f eb 21 d3 99 02
+明文
+00 00 00 03 00 01 01

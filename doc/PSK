@@ -1,0 +1,76 @@
+int __thiscall sub_23A0960(_DWORD *this, size_t Size, BBuffer *a3)
+{
+  struct _Mtx_internal_imp_t *v4; // edi
+  int v5; // eax
+  size_t v6; // eax
+  const void *v7; // esi
+  int v8; // esi
+  size_t Sizea; // [esp+2Ch] [ebp+8h]
+
+  v4 = (struct _Mtx_internal_imp_t *)this[25];
+  v5 = _Mtx_lock(v4);
+  if ( v5 )
+    std::_Throw_C_error(v5);
+  if ( (_BYTE)Size != 1 )
+  {
+    if ( (_BYTE)Size == 2 )
+    {
+      if ( this[9] )
+      {
+        sub_239FC70(this + 6);
+        v8 = 0;
+        goto LABEL_18;
+      }
+      if ( !sub_2376200(2) )
+        sub_2376210(
+          &dword_2FF6E5C,
+          2,
+          (int)msg,
+          (int)"D:\\Tools\\agent\\workspace\\Mars_Release\\mars-wechat\\mars\\mm-ext\\src\\mmtls\\mmtls_lib\\client\\mmtl"
+               "s_client_credential_storage.cpp",
+          98,
+          "serialized_refresh_psk_ is empty.");
+    }
+    else if ( !sub_2376200(2) )
+    {
+      sub_2376210(
+        &dword_2FF6E5C,
+        2,
+        (int)msg,
+        (int)"D:\\Tools\\agent\\workspace\\Mars_Release\\mars-wechat\\mars\\mm-ext\\src\\mmtls\\mmtls_lib\\client\\mmtls_"
+             "client_credential_storage.cpp",
+        102,
+        "psk_type is error. type=%d.",
+        (unsigned __int8)Size);
+    }
+LABEL_17:
+    v8 = -20198;
+    goto LABEL_18;
+  }
+  if ( !this[4] )
+  {
+    if ( !sub_2376200(2) )
+      sub_2376210(
+        &dword_2FF6E5C,
+        2,
+        (int)msg,
+        (int)"D:\\Tools\\agent\\workspace\\Mars_Release\\mars-wechat\\mars\\mm-ext\\src\\mmtls\\mmtls_lib\\client\\mmtls_"
+             "client_credential_storage.cpp",
+        91,
+        "serialized_acess_psk_ is empty.");
+    goto LABEL_17;
+  }
+  a3->cur_size = 0;
+  v6 = this[4];
+  v7 = (const void *)this[3];
+  Sizea = v6;
+  if ( v7 )
+  {
+    alloc_2281BE0(a3, v6);
+    memmove(&a3->data[a3->cur_size - Sizea], v7, Sizea);
+  }
+  v8 = 0;
+LABEL_18:
+  _Mtx_unlock(v4);
+  return v8;
+}
