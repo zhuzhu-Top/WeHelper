@@ -59,7 +59,7 @@ file(GLOB NetMain
 include_directories(./include/)
 include_directories("D:/Code/c_head/OpenSSL-Win32/include")
 include_directories("D:/Code/c_head/pb_ins/include")
-include_directories("C:/Program Files (x86)/IDA_Pro_7.7/IDA_Pro_7.7/plugins/hexrays_sdk/include")
+#include_directories("C:/Program Files (x86)/IDA_Pro_7.7/IDA_Pro_7.7/plugins/hexrays_sdk/include")
 include_directories("D:/Code/c_cpp/WeHelper/include/libhv/include")
 
 add_subdirectory(include/googletest)

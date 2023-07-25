@@ -14,6 +14,24 @@
 # EXTERNAL cache entries
 ########################
 
+//build examples
+BUILD_EXAMPLES:BOOL=OFF
+
+//build for /MT
+BUILD_FOR_MT:BOOL=OFF
+
+//Builds the googlemock subproject
+BUILD_GMOCK:BOOL=ON
+
+//build shared library
+BUILD_SHARED:BOOL=OFF
+
+//build static library
+BUILD_STATIC:BOOL=ON
+
+//build unittest
+BUILD_UNITTEST:BOOL=OFF
+
 //Path to a program.
 CMAKE_AR:FILEPATH=C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.36.32532/bin/Hostx64/x64/lib.exe
 
@@ -251,6 +269,68 @@ CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 // Studio IDE projects all commands are done without /nologo.
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
+//Unix Domain Socket
+ENABLE_UDS:BOOL=OFF
+
+//Windows MiniDumpWriteDump
+ENABLE_WINDUMP:BOOL=OFF
+
+//Value Computed by CMake
+ForTest_BINARY_DIR:STATIC=D:/zhuzhu/WeHelper/for_test
+
+//Value Computed by CMake
+ForTest_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+ForTest_SOURCE_DIR:STATIC=D:/zhuzhu/WeHelper/for_test
+
+//Use Abseil and RE2. Requires Abseil and RE2 to be separately
+// added to the build.
+GTEST_HAS_ABSL:BOOL=OFF
+
+//Enable installation of googletest. (Projects embedding googletest
+// may want to turn this OFF.)
+INSTALL_GTEST:BOOL=OFF
+
+//Build the unit tests when BUILD_TESTING is enabled.
+JSON_BuildTests:BOOL=OFF
+
+//Enable CI build targets.
+JSON_CI:BOOL=OFF
+
+//Use extended diagnostic messages.
+JSON_Diagnostics:BOOL=OFF
+
+//Disable default integer enum serialization.
+JSON_DisableEnumSerialization:BOOL=OFF
+
+//Place use-defined string literals in the global namespace.
+JSON_GlobalUDLs:BOOL=ON
+
+//Enable implicit conversions.
+JSON_ImplicitConversions:BOOL=ON
+
+//Install CMake targets during install step.
+JSON_Install:BOOL=OFF
+
+//Enable legacy discarded value comparison.
+JSON_LegacyDiscardedValueComparison:BOOL=OFF
+
+//Use non-amalgamated version of the library.
+JSON_MultipleHeaders:BOOL=ON
+
+//Include as system headers (skip for clang-tidy).
+JSON_SystemInclude:BOOL=OFF
+
+//Value Computed by CMake
+PrintXlog_BINARY_DIR:STATIC=D:/zhuzhu/WeHelper/HookXlog
+
+//Value Computed by CMake
+PrintXlog_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+PrintXlog_SOURCE_DIR:STATIC=D:/zhuzhu/WeHelper/HookXlog
+
 //Build all artifacts
 SPDLOG_BUILD_ALL:BOOL=OFF
 
@@ -333,6 +413,45 @@ SPDLOG_WCHAR_FILENAMES:BOOL=OFF
 //Support wchar api
 SPDLOG_WCHAR_SUPPORT:BOOL=OFF
 
+//MultiMap
+USE_MULTIMAP:BOOL=OFF
+
+//with curl library
+WITH_CURL:BOOL=OFF
+
+//compile evpp
+WITH_EVPP:BOOL=ON
+
+//with gnutls library
+WITH_GNUTLS:BOOL=OFF
+
+//compile http
+WITH_HTTP:BOOL=ON
+
+//compile http/client
+WITH_HTTP_CLIENT:BOOL=ON
+
+//compile http/server
+WITH_HTTP_SERVER:BOOL=ON
+
+//with kcp
+WITH_KCP:BOOL=OFF
+
+//with mbedtls library
+WITH_MBEDTLS:BOOL=OFF
+
+//compile mqtt
+WITH_MQTT:BOOL=OFF
+
+//with nghttp2 library
+WITH_NGHTTP2:BOOL=OFF
+
+//with openssl library
+WITH_OPENSSL:BOOL=OFF
+
+//compile protocol
+WITH_PROTOCOL:BOOL=OFF
+
 //Value Computed by CMake
 WeHelper_BINARY_DIR:STATIC=D:/zhuzhu/WeHelper
 
@@ -346,10 +465,83 @@ WeHelper_SOURCE_DIR:STATIC=D:/zhuzhu/WeHelper
 absl_DIR:PATH=absl_DIR-NOTFOUND
 
 //Path to a library.
-frida_core:FILEPATH=frida_core-NOTFOUND
+frida_core:FILEPATH=D:/zhuzhu/WeHelper/lib/frida-core.lib
+
+//Value Computed by CMake
+gmock_BINARY_DIR:STATIC=D:/zhuzhu/WeHelper/include/googletest/googlemock
+
+//Value Computed by CMake
+gmock_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+gmock_SOURCE_DIR:STATIC=D:/zhuzhu/WeHelper/include/googletest/googlemock
+
+//Build all of Google Mock's own tests.
+gmock_build_tests:BOOL=OFF
+
+//Value Computed by CMake
+googletest-distribution_BINARY_DIR:STATIC=D:/zhuzhu/WeHelper/include/googletest
+
+//Value Computed by CMake
+googletest-distribution_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+googletest-distribution_SOURCE_DIR:STATIC=D:/zhuzhu/WeHelper/include/googletest
+
+//Value Computed by CMake
+gtest_BINARY_DIR:STATIC=D:/zhuzhu/WeHelper/include/googletest/googletest
+
+//Value Computed by CMake
+gtest_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+gtest_SOURCE_DIR:STATIC=D:/zhuzhu/WeHelper/include/googletest/googletest
+
+//Build gtest's sample programs.
+gtest_build_samples:BOOL=OFF
+
+//Build all of gtest's own tests.
+gtest_build_tests:BOOL=OFF
+
+//Disable uses of pthreads in gtest.
+gtest_disable_pthreads:BOOL=OFF
+
+//Use shared (DLL) run-time lib even when Google Test is built
+// as static lib.
+gtest_force_shared_crt:BOOL=OFF
+
+//Build gtest with internal symbols hidden in shared libraries.
+gtest_hide_internal_symbols:BOOL=OFF
+
+//Dependencies for the target
+gtest_main_LIB_DEPENDS:STATIC=general;gtest;
+
+//Path to a library.
+gum:FILEPATH=gum-NOTFOUND
+
+//Value Computed by CMake
+hv_BINARY_DIR:STATIC=D:/zhuzhu/WeHelper/include/libhv
+
+//Value Computed by CMake
+hv_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+hv_SOURCE_DIR:STATIC=D:/zhuzhu/WeHelper/include/libhv
+
+//Dependencies for the target
+hv_static_LIB_DEPENDS:STATIC=general;winmm;general;iphlpapi;general;ws2_32;
 
 //Path to a library.
 libcrypto:FILEPATH=D:/zhuzhu/WeHelper/lib/libcrypto.lib
+
+//Value Computed by CMake
+nlohmann_json_BINARY_DIR:STATIC=D:/zhuzhu/WeHelper/json
+
+//Value Computed by CMake
+nlohmann_json_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+nlohmann_json_SOURCE_DIR:STATIC=D:/zhuzhu/WeHelper/json
 
 //Path to a library.
 openssl:FILEPATH=D:/zhuzhu/WeHelper/lib/openssl.lib
@@ -498,7 +690,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_MT
 CMAKE_MT-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=4
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=9
 //Platform information initialized
 CMAKE_PLATFORM_INFO_INITIALIZED:INTERNAL=1
 //noop for ranlib
@@ -544,8 +736,85 @@ CMAKE_STATIC_LINKER_FLAGS_RELEASE-ADVANCED:INTERNAL=1
 CMAKE_STATIC_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_VERBOSE_MAKEFILE
 CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
+//Details about finding Python
+FIND_PACKAGE_MESSAGE_DETAILS_Python:INTERNAL=[C:/Users/zhanghua/AppData/Local/Programs/Python/Python310/python.exe][cfound components: Interpreter ][v3.10.4()]
 //Details about finding Threads
 FIND_PACKAGE_MESSAGE_DETAILS_Threads:INTERNAL=[TRUE][v()]
+//Have symbol clock_gettime
+HAVE_CLOCK_GETTIME:INTERNAL=
+//Have includes endian.h
+HAVE_ENDIAN_H:INTERNAL=
+//Have symbol eventfd
+HAVE_EVENTFD:INTERNAL=
+//Have include fcntl.h
+HAVE_FCNTL_H:INTERNAL=1
+//Have symbol gettid
+HAVE_GETTID:INTERNAL=
+//Have symbol gettimeofday
+HAVE_GETTIMEOFDAY:INTERNAL=
+//Have symbol pipe
+HAVE_PIPE:INTERNAL=
+//Have includes pthread.h
+HAVE_PTHREAD_H:INTERNAL=
+//Have symbol pthread_mutex_timedlock
+HAVE_PTHREAD_MUTEX_TIMEDLOCK:INTERNAL=
+//Have symbol pthread_spin_lock
+HAVE_PTHREAD_SPIN_LOCK:INTERNAL=
+//Have symbol sem_timedwait
+HAVE_SEM_TIMEDWAIT:INTERNAL=
+//Have symbol setproctitle
+HAVE_SETPROCTITLE:INTERNAL=
+//Have symbol socketpair
+HAVE_SOCKETPAIR:INTERNAL=
+//Have includes stdatomic.h
+HAVE_STDATOMIC_H:INTERNAL=
+//Have include stdbool.h
+HAVE_STDBOOL_H:INTERNAL=1
+//Have include stdint.h
+HAVE_STDINT_H:INTERNAL=1
+//Have symbol strlcat
+HAVE_STRLCAT:INTERNAL=
+//Have symbol strlcpy
+HAVE_STRLCPY:INTERNAL=
+//Have includes sys/endian.h
+HAVE_SYS_ENDIAN_H:INTERNAL=
+//Have include sys/stat.h
+HAVE_SYS_STAT_H:INTERNAL=1
+//Have includes sys/time.h
+HAVE_SYS_TIME_H:INTERNAL=
+//Have include sys/types.h
+HAVE_SYS_TYPES_H:INTERNAL=1
+//link hv libraries
+HV_LIBRARIES:INTERNAL=hv_static;winmm;iphlpapi;ws2_32
+NLOHMANN_JSON_CONFIG_INSTALL_DIR:INTERNAL=share/cmake/nlohmann_json
+PYTHONINTERP_FOUND:INTERNAL=TRUE
+PYTHON_EXECUTABLE:INTERNAL=C:/Users/zhanghua/AppData/Local/Programs/Python/Python310/python.exe
 //CMAKE_INSTALL_PREFIX during last run
 _GNUInstallDirs_LAST_CMAKE_INSTALL_PREFIX:INTERNAL=C:/Program Files (x86)/WeHelper
+//Compiler reason failure
+_Python_Compiler_REASON_FAILURE:INTERNAL=
+//Development reason failure
+_Python_Development_REASON_FAILURE:INTERNAL=
+//Path to a program.
+_Python_EXECUTABLE:INTERNAL=C:/Users/zhanghua/AppData/Local/Programs/Python/Python310/python.exe
+//Python Properties
+_Python_INTERPRETER_PROPERTIES:INTERNAL=Python;3;10;4;64;;cp310-win_amd64;C:\Users\zhanghua\AppData\Local\Programs\Python\Python310\Lib;C:\Users\zhanghua\AppData\Local\Programs\Python\Python310\Lib;C:\Users\zhanghua\AppData\Local\Programs\Python\Python310\Lib\site-packages;C:\Users\zhanghua\AppData\Local\Programs\Python\Python310\Lib\site-packages
+_Python_INTERPRETER_SIGNATURE:INTERNAL=03984003ff5d07fd1da21c4a99c83f73
+//Interpreter reason failure
+_Python_Interpreter_REASON_FAILURE:INTERNAL=
+//NumPy reason failure
+_Python_NumPy_REASON_FAILURE:INTERNAL=
+cmake_package_name:INTERNAL=GTest
+//ADVANCED property for variable: gmock_build_tests
+gmock_build_tests-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_build_samples
+gtest_build_samples-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_build_tests
+gtest_build_tests-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_disable_pthreads
+gtest_disable_pthreads-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_force_shared_crt
+gtest_force_shared_crt-ADVANCED:INTERNAL=1
+//ADVANCED property for variable: gtest_hide_internal_symbols
+gtest_hide_internal_symbols-ADVANCED:INTERNAL=1
 

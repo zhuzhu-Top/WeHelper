@@ -7,7 +7,7 @@ Id flags:
 The output was:
 0
 MSBuild version 17.6.3+07e294721 for .NET Framework
-生成启动时间为 2023/7/25 17:39:27。
+生成启动时间为 2023/7/25 22:08:56。
 
 节点 1 上的项目“D:\zhuzhu\WeHelper\CMakeFiles\3.25.0-rc2\CompilerIdC\CompilerIdC.vcxproj”(默认目标)。
 PrepareForBuild:
@@ -43,7 +43,7 @@ FinalizeBuildStatus:
     0 个警告
     0 个错误
 
-已用时间 00:00:01.17
+已用时间 00:00:02.59
 
 
 Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -60,7 +60,7 @@ Id flags:
 The output was:
 0
 MSBuild version 17.6.3+07e294721 for .NET Framework
-生成启动时间为 2023/7/25 17:39:28。
+生成启动时间为 2023/7/25 22:08:59。
 
 节点 1 上的项目“D:\zhuzhu\WeHelper\CMakeFiles\3.25.0-rc2\CompilerIdCXX\CompilerIdCXX.vcxproj”(默认目标)。
 PrepareForBuild:
@@ -96,7 +96,7 @@ FinalizeBuildStatus:
     0 个警告
     0 个错误
 
-已用时间 00:00:00.85
+已用时间 00:00:00.87
 
 
 Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -106,28 +106,93 @@ Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" p
 The CXX compiler identification is MSVC, found in "D:/zhuzhu/WeHelper/CMakeFiles/3.25.0-rc2/CompilerIdCXX/CompilerIdCXX.exe"
 
 Detecting C compiler ABI info compiled with the following output:
-Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-9c1ql2
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-t22250
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_4e674.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_ea1bd.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
   CMakeCCompilerABI.c
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4e674.dir\Debug\\" /Fd"cmTC_4e674.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\tools\cmake325\share\cmake-3.25\Modules\CMakeCCompilerABI.c"
-  cmTC_4e674.vcxproj -> D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-9c1ql2\Debug\cmTC_4e674.exe
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ea1bd.dir\Debug\\" /Fd"cmTC_ea1bd.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\tools\cmake325\share\cmake-3.25\Modules\CMakeCCompilerABI.c"
+  cmTC_ea1bd.vcxproj -> D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-t22250\Debug\cmTC_ea1bd.exe
 
 
 
 Detecting CXX compiler ABI info compiled with the following output:
-Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-53zlw2
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-5zr3gm
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_9a396.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_62656.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
   CMakeCXXCompilerABI.cpp
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9a396.dir\Debug\\" /Fd"cmTC_9a396.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "D:\tools\cmake325\share\cmake-3.25\Modules\CMakeCXXCompilerABI.cpp"
-  cmTC_9a396.vcxproj -> D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-53zlw2\Debug\cmTC_9a396.exe
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_62656.dir\Debug\\" /Fd"cmTC_62656.dir\Debug\vc143.pdb" /external:W1 /Gd /TP /errorReport:queue "D:\tools\cmake325\share\cmake-3.25\Modules\CMakeCXXCompilerABI.cpp"
+  cmTC_62656.vcxproj -> D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-5zr3gm\Debug\cmTC_62656.exe
+
+
+
+Determining if files stdbool.h exist passed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-hbc8sq
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_b4fa7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  HAVE_STDBOOL_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b4fa7.dir\Debug\\" /Fd"cmTC_b4fa7.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-hbc8sq\HAVE_STDBOOL_H.c"
+  cmTC_b4fa7.vcxproj -> D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-hbc8sq\Debug\cmTC_b4fa7.exe
+
+
+
+Determining if files stdint.h exist passed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-jg2n1o
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_5f53b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  HAVE_STDINT_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5f53b.dir\Debug\\" /Fd"cmTC_5f53b.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-jg2n1o\HAVE_STDINT_H.c"
+  cmTC_5f53b.vcxproj -> D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-jg2n1o\Debug\cmTC_5f53b.exe
+
+
+
+Determining if files sys/types.h exist passed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-n8expv
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_8956e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  HAVE_SYS_TYPES_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_8956e.dir\Debug\\" /Fd"cmTC_8956e.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-n8expv\HAVE_SYS_TYPES_H.c"
+  cmTC_8956e.vcxproj -> D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-n8expv\Debug\cmTC_8956e.exe
+
+
+
+Determining if files sys/stat.h exist passed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-4nl3me
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_be8ff.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  HAVE_SYS_STAT_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_be8ff.dir\Debug\\" /Fd"cmTC_be8ff.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-4nl3me\HAVE_SYS_STAT_H.c"
+  cmTC_be8ff.vcxproj -> D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-4nl3me\Debug\cmTC_be8ff.exe
+
+
+
+Determining if files fcntl.h exist passed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-2e50vv
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_b30d6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  HAVE_FCNTL_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b30d6.dir\Debug\\" /Fd"cmTC_b30d6.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-2e50vv\HAVE_FCNTL_H.c"
+  cmTC_b30d6.vcxproj -> D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-2e50vv\Debug\cmTC_b30d6.exe
 
 
 

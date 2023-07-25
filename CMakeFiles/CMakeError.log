@@ -1,13 +1,13 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
-Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-7dvl1s
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-5mrn35
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_2a86b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_9622d.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
   src.c
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2a86b.dir\Debug\\" /Fd"cmTC_2a86b.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-7dvl1s\src.c"
-D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-7dvl1s\src.c(1,10): fatal  error C1083: Cannot open include file: 'pthread.h': No such file or directory [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-7dvl1s\cmTC_2a86b.vcxproj]
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_9622d.dir\Debug\\" /Fd"cmTC_9622d.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-5mrn35\src.c"
+D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-5mrn35\src.c(1,10): fatal  error C1083: Cannot open include file: 'pthread.h': No such file or directory [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-5mrn35\cmTC_9622d.vcxproj]
 
 
 Source file was:
@@ -33,28 +33,510 @@ int main(void)
 
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-nh2l0y
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-s22fhi
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_09a4f.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_33b84.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
-  CheckFunctionExists.c
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_09a4f.dir\Debug\\" /Fd"cmTC_09a4f.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-nh2l0y\CheckFunctionExists.c"
-LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-nh2l0y\cmTC_09a4f.vcxproj]
+  CheckFunctionExists.c
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_33b84.dir\Debug\\" /Fd"cmTC_33b84.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-s22fhi\CheckFunctionExists.c"
+LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-s22fhi\cmTC_33b84.vcxproj]
 
 
 
 Determining if the function pthread_create exists in the pthread failed with the following output:
-Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-tn4poo
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-bstfsa
 
-Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_1fecb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_bb4c8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
 
   Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
   CheckFunctionExists.c
   Copyright (C) Microsoft Corporation.  All rights reserved.
-  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1fecb.dir\Debug\\" /Fd"cmTC_1fecb.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-tn4poo\CheckFunctionExists.c"
-LINK : fatal error LNK1104: cannot open file 'pthread.lib' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-tn4poo\cmTC_1fecb.vcxproj]
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_bb4c8.dir\Debug\\" /Fd"cmTC_bb4c8.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-bstfsa\CheckFunctionExists.c"
+LINK : fatal error LNK1104: cannot open file 'pthread.lib' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-bstfsa\cmTC_bb4c8.vcxproj]
 
 
 
+Determining if files stdatomic.h exist failed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-gxu0qg
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_4bdd1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  HAVE_STDATOMIC_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_4bdd1.dir\Debug\\" /Fd"cmTC_4bdd1.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\HAVE_STDATOMIC_H.c"
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(36,24): error C2061: syntax error: identifier 'atomic_bool' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(36,24): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(37,23): error C2061: syntax error: identifier 'atomic_char' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(37,23): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(38,30): error C2061: syntax error: identifier 'atomic_schar' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(38,30): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(39,32): error C2061: syntax error: identifier 'atomic_uchar' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(39,32): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(40,24): error C2061: syntax error: identifier 'atomic_short' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(40,24): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(41,33): error C2061: syntax error: identifier 'atomic_ushort' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(41,33): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(42,22): error C2061: syntax error: identifier 'atomic_int' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(42,22): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(43,31): error C2061: syntax error: identifier 'atomic_uint' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(43,31): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(44,23): error C2061: syntax error: identifier 'atomic_long' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(44,23): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(45,32): error C2061: syntax error: identifier 'atomic_ulong' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(45,32): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(46,28): error C2061: syntax error: identifier 'atomic_llong' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(46,28): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(47,37): error C2061: syntax error: identifier 'atomic_ullong' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(47,37): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(48,27): error C2061: syntax error: identifier 'atomic_char16_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(48,27): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(49,27): error C2061: syntax error: identifier 'atomic_char32_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(49,27): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(50,26): error C2061: syntax error: identifier 'atomic_wchar_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(50,26): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(51,31): error C2061: syntax error: identifier 'atomic_int_least8_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(51,31): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(52,32): error C2061: syntax error: identifier 'atomic_uint_least8_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(52,32): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(53,32): error C2061: syntax error: identifier 'atomic_int_least16_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(53,32): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(54,33): error C2061: syntax error: identifier 'atomic_uint_least16_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(54,33): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(55,32): error C2061: syntax error: identifier 'atomic_int_least32_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(55,32): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(56,33): error C2061: syntax error: identifier 'atomic_uint_least32_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(56,33): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(57,32): error C2061: syntax error: identifier 'atomic_int_least64_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(57,32): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(58,33): error C2061: syntax error: identifier 'atomic_uint_least64_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(58,33): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(59,30): error C2061: syntax error: identifier 'atomic_int_fast8_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(59,30): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(60,31): error C2061: syntax error: identifier 'atomic_uint_fast8_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(60,31): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(61,31): error C2061: syntax error: identifier 'atomic_int_fast16_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(61,31): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(62,32): error C2061: syntax error: identifier 'atomic_uint_fast16_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(62,32): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(63,31): error C2061: syntax error: identifier 'atomic_int_fast32_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(63,31): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(64,32): error C2061: syntax error: identifier 'atomic_uint_fast32_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(64,32): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(65,31): error C2061: syntax error: identifier 'atomic_int_fast64_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(65,31): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(66,32): error C2061: syntax error: identifier 'atomic_uint_fast64_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(66,32): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(67,27): error C2061: syntax error: identifier 'atomic_intptr_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(67,27): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(68,28): error C2061: syntax error: identifier 'atomic_uintptr_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(68,28): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(69,25): error C2061: syntax error: identifier 'atomic_size_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(69,25): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(70,28): error C2061: syntax error: identifier 'atomic_ptrdiff_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(70,28): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(71,27): error C2061: syntax error: identifier 'atomic_intmax_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(71,27): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(72,28): error C2061: syntax error: identifier 'atomic_uintmax_t' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(72,28): error C2059: syntax error: ';' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(121,5): error C2061: syntax error: identifier '_Atomic' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+C:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.36.32532\include\vcruntime_c11_stdatomic.h(122,1): error C2059: syntax error: '}' [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-gxu0qg\cmTC_4bdd1.vcxproj]
+
+
+Source:
+/* */
+#include <stdatomic.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/time.h exist failed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-8i9gyl
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_a328a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  HAVE_SYS_TIME_H.c
+D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-8i9gyl\HAVE_SYS_TIME_H.c(2,10): fatal  error C1083: Cannot open include file: 'sys/time.h': No such file or directory [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-8i9gyl\cmTC_a328a.vcxproj]
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_a328a.dir\Debug\\" /Fd"cmTC_a328a.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-8i9gyl\HAVE_SYS_TIME_H.c"
+
+
+Source:
+/* */
+#include <sys/time.h>
+
+
+int main(void){return 0;}
+
+Determining if files pthread.h exist failed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-t8ofpx
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_eb2b1.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  HAVE_PTHREAD_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_eb2b1.dir\Debug\\" /Fd"cmTC_eb2b1.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-t8ofpx\HAVE_PTHREAD_H.c"
+D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-t8ofpx\HAVE_PTHREAD_H.c(2,10): fatal  error C1083: Cannot open include file: 'pthread.h': No such file or directory [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-t8ofpx\cmTC_eb2b1.vcxproj]
+
+
+Source:
+/* */
+#include <pthread.h>
+
+
+int main(void){return 0;}
+
+Determining if files endian.h exist failed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-hbb69d
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_e6654.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  HAVE_ENDIAN_H.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e6654.dir\Debug\\" /Fd"cmTC_e6654.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-hbb69d\HAVE_ENDIAN_H.c"
+D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-hbb69d\HAVE_ENDIAN_H.c(2,10): fatal  error C1083: Cannot open include file: 'endian.h': No such file or directory [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-hbb69d\cmTC_e6654.vcxproj]
+
+
+Source:
+/* */
+#include <endian.h>
+
+
+int main(void){return 0;}
+
+Determining if files sys/endian.h exist failed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-h8aqfx
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_1ae38.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  HAVE_SYS_ENDIAN_H.c
+D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-h8aqfx\HAVE_SYS_ENDIAN_H.c(2,10): fatal  error C1083: Cannot open include file: 'sys/endian.h': No such file or directory [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-h8aqfx\cmTC_1ae38.vcxproj]
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1ae38.dir\Debug\\" /Fd"cmTC_1ae38.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-h8aqfx\HAVE_SYS_ENDIAN_H.c"
+
+
+Source:
+/* */
+#include <sys/endian.h>
+
+
+int main(void){return 0;}
+
+Determining if the gettid exist failed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-om55y5
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_60ceb.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_60ceb.dir\Debug\\" /Fd"cmTC_60ceb.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-om55y5\CheckSymbolExists.c"
+D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-om55y5\CheckSymbolExists.c(2,10): fatal  error C1083: Cannot open include file: 'unistd.h': No such file or directory [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-om55y5\cmTC_60ceb.vcxproj]
+
+
+File CheckSymbolExists.c:
+/* */
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef gettid
+  return ((int*)(&gettid))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strlcpy exist failed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-nlp9v7
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_ca36e.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ca36e.dir\Debug\\" /Fd"cmTC_ca36e.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-nlp9v7\CheckSymbolExists.c"
+D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-nlp9v7\CheckSymbolExists.c(8,26): error C2065: 'strlcpy': undeclared identifier [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-nlp9v7\cmTC_ca36e.vcxproj]
+
+
+File CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strlcpy
+  return ((int*)(&strlcpy))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the strlcat exist failed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-5gh0fh
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_f3fb9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f3fb9.dir\Debug\\" /Fd"cmTC_f3fb9.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-5gh0fh\CheckSymbolExists.c"
+D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-5gh0fh\CheckSymbolExists.c(8,26): error C2065: 'strlcat': undeclared identifier [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-5gh0fh\cmTC_f3fb9.vcxproj]
+
+
+File CheckSymbolExists.c:
+/* */
+#include <string.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef strlcat
+  return ((int*)(&strlcat))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the clock_gettime exist failed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-g2zsw6
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_f8b66.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f8b66.dir\Debug\\" /Fd"cmTC_f8b66.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-g2zsw6\CheckSymbolExists.c"
+D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-g2zsw6\CheckSymbolExists.c(8,32): error C2065: 'clock_gettime': undeclared identifier [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-g2zsw6\cmTC_f8b66.vcxproj]
+
+
+File CheckSymbolExists.c:
+/* */
+#include <time.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef clock_gettime
+  return ((int*)(&clock_gettime))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the gettimeofday exist failed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-f8psyf
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_c7cf0.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  CheckSymbolExists.c
+D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-f8psyf\CheckSymbolExists.c(2,10): fatal  error C1083: Cannot open include file: 'sys/time.h': No such file or directory [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-f8psyf\cmTC_c7cf0.vcxproj]
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_c7cf0.dir\Debug\\" /Fd"cmTC_c7cf0.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-f8psyf\CheckSymbolExists.c"
+
+
+File CheckSymbolExists.c:
+/* */
+#include <sys/time.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef gettimeofday
+  return ((int*)(&gettimeofday))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the pthread_spin_lock exist failed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-19dbg4
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_45ae7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_45ae7.dir\Debug\\" /Fd"cmTC_45ae7.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-19dbg4\CheckSymbolExists.c"
+D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-19dbg4\CheckSymbolExists.c(2,10): fatal  error C1083: Cannot open include file: 'pthread.h': No such file or directory [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-19dbg4\cmTC_45ae7.vcxproj]
+
+
+File CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_spin_lock
+  return ((int*)(&pthread_spin_lock))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the pthread_mutex_timedlock exist failed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-k4ntca
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_1ddd4.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1ddd4.dir\Debug\\" /Fd"cmTC_1ddd4.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-k4ntca\CheckSymbolExists.c"
+D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-k4ntca\CheckSymbolExists.c(2,10): fatal  error C1083: Cannot open include file: 'pthread.h': No such file or directory [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-k4ntca\cmTC_1ddd4.vcxproj]
+
+
+File CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_mutex_timedlock
+  return ((int*)(&pthread_mutex_timedlock))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the sem_timedwait exist failed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-a73pws
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_5e824.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  CheckSymbolExists.c
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_5e824.dir\Debug\\" /Fd"cmTC_5e824.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-a73pws\CheckSymbolExists.c"
+D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-a73pws\CheckSymbolExists.c(2,10): fatal  error C1083: Cannot open include file: 'semaphore.h': No such file or directory [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-a73pws\cmTC_5e824.vcxproj]
+
+
+File CheckSymbolExists.c:
+/* */
+#include <semaphore.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef sem_timedwait
+  return ((int*)(&sem_timedwait))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the pipe exist failed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-u2h78k
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_e0126.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckSymbolExists.c
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_e0126.dir\Debug\\" /Fd"cmTC_e0126.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-u2h78k\CheckSymbolExists.c"
+D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-u2h78k\CheckSymbolExists.c(2,10): fatal  error C1083: Cannot open include file: 'unistd.h': No such file or directory [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-u2h78k\cmTC_e0126.vcxproj]
+
+
+File CheckSymbolExists.c:
+/* */
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pipe
+  return ((int*)(&pipe))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the socketpair exist failed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-69rj30
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_2e623.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  CheckSymbolExists.c
+D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-69rj30\CheckSymbolExists.c(2,10): fatal  error C1083: Cannot open include file: 'sys/socket.h': No such file or directory [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-69rj30\cmTC_2e623.vcxproj]
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2e623.dir\Debug\\" /Fd"cmTC_2e623.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-69rj30\CheckSymbolExists.c"
+
+
+File CheckSymbolExists.c:
+/* */
+#include <sys/socket.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef socketpair
+  return ((int*)(&socketpair))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the eventfd exist failed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-4wg8y3
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_6fdd8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  CheckSymbolExists.c
+D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-4wg8y3\CheckSymbolExists.c(2,10): fatal  error C1083: Cannot open include file: 'sys/eventfd.h': No such file or directory [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-4wg8y3\cmTC_6fdd8.vcxproj]
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6fdd8.dir\Debug\\" /Fd"cmTC_6fdd8.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-4wg8y3\CheckSymbolExists.c"
+
+
+File CheckSymbolExists.c:
+/* */
+#include <sys/eventfd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef eventfd
+  return ((int*)(&eventfd))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+Determining if the setproctitle exist failed with the following output:
+Change Dir: D:/zhuzhu/WeHelper/CMakeFiles/CMakeScratch/TryCompile-9rrg10
+
+Run Build Command(s):C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe cmTC_1bfa5.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:m && MSBuild version 17.6.3+07e294721 for .NET Framework
+
+  Microsoft (R) C/C++ Optimizing Compiler Version 19.36.32537 for x64
+  Copyright (C) Microsoft Corporation.  All rights reserved.
+  CheckSymbolExists.c
+  cl /c /I"D:\tools\vcpkg\installed\x64-windows\include" /Zi /W1 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\"Debug\"" /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1bfa5.dir\Debug\\" /Fd"cmTC_1bfa5.dir\Debug\vc143.pdb" /external:W1 /Gd /TC /errorReport:queue "D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-9rrg10\CheckSymbolExists.c"
+D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-9rrg10\CheckSymbolExists.c(2,10): fatal  error C1083: Cannot open include file: 'unistd.h': No such file or directory [D:\zhuzhu\WeHelper\CMakeFiles\CMakeScratch\TryCompile-9rrg10\cmTC_1bfa5.vcxproj]
+
+
+File CheckSymbolExists.c:
+/* */
+#include <unistd.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef setproctitle
+  return ((int*)(&setproctitle))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
